@@ -1,4 +1,4 @@
-# Install script for directory: /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer
+# Install script for directory: /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/esp-idf/cmake_install.cmake")
+  include("/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/install_local_manifest.txt"
+  file(WRITE "/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -62,6 +62,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

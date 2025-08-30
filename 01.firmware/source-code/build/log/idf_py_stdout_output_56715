@@ -1,0 +1,72 @@
+[1/5] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/partition_table/partition-table.bin /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/lvgl_demo_v9.bin
+lvgl_demo_v9.bin binary size 0xd6130 bytes. Smallest app partition is 0x800000 bytes. 0x729ed0 bytes (90%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/bootloader.bin
+Bootloader binary size 0x57c0 bytes. 0x2840 bytes (31%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/wangjiaqi/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/wangjiaqi/esp/esp-idf -D "SERIAL_TOOL=/Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/wangjiaqi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build -P /Users/wangjiaqi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 lvgl_demo_v9.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/cu.usbmodem1101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 30:ed:a0:ae:06:cc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000e6fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22464 bytes to 14260...
+Writing at 0x00000000... (100 %)
+Wrote 22464 bytes (14260 compressed) at 0x00000000 in 0.4 seconds (effective 410.3 kbit/s)...
+Hash of data verified.
+Compressed 876848 bytes to 511853...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cc66... (6 %)
+Writing at 0x00027207... (9 %)
+Writing at 0x0002f894... (12 %)
+Writing at 0x0003b5e0... (15 %)
+Writing at 0x00046f04... (18 %)
+Writing at 0x0004e593... (21 %)
+Writing at 0x00054066... (25 %)
+Writing at 0x00059ef4... (28 %)
+Writing at 0x0005fb12... (31 %)
+Writing at 0x0006916c... (34 %)
+Writing at 0x0006e593... (37 %)
+Writing at 0x00073c4b... (40 %)
+Writing at 0x000792f8... (43 %)
+Writing at 0x0007e453... (46 %)
+Writing at 0x000836c3... (50 %)
+Writing at 0x00088a6d... (53 %)
+Writing at 0x0008ee75... (56 %)
+Writing at 0x00093eae... (59 %)
+Writing at 0x00099095... (62 %)
+Writing at 0x0009e1c5... (65 %)
+Writing at 0x000a3eb7... (68 %)
+Writing at 0x000a9d0f... (71 %)
+Writing at 0x000af9e8... (75 %)
+Writing at 0x000b5d9e... (78 %)
+Writing at 0x000bfa6e... (81 %)
+Writing at 0x000c6a46... (84 %)
+Writing at 0x000cc440... (87 %)
+Writing at 0x000d1ada... (90 %)
+Writing at 0x000d706a... (93 %)
+Writing at 0x000de49a... (96 %)
+Writing at 0x000e4609... (100 %)
+Wrote 876848 bytes (511853 compressed) at 0x00010000 in 9.7 seconds (effective 721.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 120...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (120 compressed) at 0x00008000 in 0.1 seconds (effective 350.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/managed_components/waveshare__esp_lcd_sh8601
+# Install script for directory: /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp_lcd_sh8601
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/esp-idf/waveshare__esp_lcd_sh8601/install_local_manifest.txt"
+  file(WRITE "/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/waveshare__esp_lcd_sh8601/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

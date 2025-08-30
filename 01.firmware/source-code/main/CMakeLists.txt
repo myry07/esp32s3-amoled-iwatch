@@ -3,7 +3,11 @@ file(GLOB_RECURSE LV_DEMOS_SOURCES ${LV_DEMO_DIR}/*.c)
 
 idf_component_register(
     SRCS main.c ${LV_DEMOS_SOURCES} 
-         lvgl_port/video_audio.c
+    lvgl_port/show_jpg.c
+    lvgl_port/lock_page.c
+    lvgl_port/video_audio.c
+    lvgl_port/main_page.c
+    lvgl_port/photo_album.c
 
 
 

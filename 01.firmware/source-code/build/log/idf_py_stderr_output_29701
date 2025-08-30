@@ -1,0 +1,135 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbmodem1101 2000000[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x42009817: s_test_psram at /Users/wangjiaqi/esp/esp-idf/components/esp_psram/esp_psram.c:472
+[0m
+[0;33m--- 0x4205abdc: block_size at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:87
+---  (inlined by) block_is_last at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:98
+---  (inlined by) tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+[0m
+[0;33m--- 0x4205ab48: multi_heap_get_info_tlsf at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:392
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4205abd9: tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+--- 0x4205aafd: multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:420 (discriminator 1)
+---  (inlined by) multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:409 (discriminator 1)
+--- 0x42003481: heap_caps_get_info at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:375
+--- 0x420034cd: heap_caps_get_largest_free_block at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:304
+--- 0x4038845b: get_buffer_malloc at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c:219
+--- 0x40387f66: esp_flash_read at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/esp_flash_api.c:877
+--- 0x4203e909: esp_partition_read at /Users/wangjiaqi/esp/esp-idf/components/esp_partition/partition_target.c:38
+--- 0x4200b1bb: spiffs_api_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs_api.c:27
+--- 0x4200eb23: spiffs_phys_rd at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_cache.c:161
+--- 0x4200c31a: spiffs_page_data_check at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:20
+--- 0x4200e5e8: spiffs_object_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:2052
+--- 0x4200b878: spiffs_hydro_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:414
+---  (inlined by) SPIFFS_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:426
+--- 0x4200b008: vfs_spiffs_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/esp_spiffs.c:573
+--- 0x42008dd9: esp_vfs_read at /Users/wangjiaqi/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 3)
+--- 0x42049007: __sread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:47
+--- 0x42048ef6: __srefill_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/refill.c:115
+--- 0x42048976: _fread_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:228
+--- 0x420489f9: fread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:266 (discriminator 1)
+--- 0x4203836a: fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/fsdrv/lv_fs_stdio.c:162
+--- 0x42023571: lv_fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_fs.c:207
+--- 0x420385d1: input_func at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:135
+--- 0x42038efd: jd_prepare at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/tjpgd.c:1020
+--- 0x4203861f: decoder_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:112
+--- 0x4201a6fa: image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:343
+--- 0x4201a7f9: lv_image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:86
+--- 0x4202d5ee: lv_image_set_src at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/image/lv_image.c:185
+--- 0x42009ef4: page_lock_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/lock_page.c:139
+--- 0x42009d7e: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:52
+--- 0x4205a38f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x40376004: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4205abdc: block_size at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:87
+---  (inlined by) block_is_last at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:98
+---  (inlined by) tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+[0m
+[0;33m--- 0x4205ab48: multi_heap_get_info_tlsf at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:392
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4205abd9: tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+--- 0x4205aafd: multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:420 (discriminator 1)
+---  (inlined by) multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:409 (discriminator 1)
+--- 0x42003481: heap_caps_get_info at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:375
+--- 0x420034cd: heap_caps_get_largest_free_block at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:304
+--- 0x4038845b: get_buffer_malloc at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c:219
+--- 0x40387f66: esp_flash_read at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/esp_flash_api.c:877
+--- 0x4203e909: esp_partition_read at /Users/wangjiaqi/esp/esp-idf/components/esp_partition/partition_target.c:38
+--- 0x4200b1bb: spiffs_api_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs_api.c:27
+--- 0x4200eb23: spiffs_phys_rd at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_cache.c:161
+--- 0x4200c31a: spiffs_page_data_check at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:20
+--- 0x4200e5e8: spiffs_object_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:2052
+--- 0x4200b878: spiffs_hydro_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:414
+---  (inlined by) SPIFFS_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:426
+--- 0x4200b008: vfs_spiffs_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/esp_spiffs.c:573
+--- 0x42008dd9: esp_vfs_read at /Users/wangjiaqi/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 3)
+--- 0x42049007: __sread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:47
+--- 0x42048ef6: __srefill_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/refill.c:115
+--- 0x42048976: _fread_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:228
+--- 0x420489f9: fread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:266 (discriminator 1)
+--- 0x4203836a: fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/fsdrv/lv_fs_stdio.c:162
+--- 0x42023571: lv_fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_fs.c:207
+--- 0x420385d1: input_func at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:135
+--- 0x42038efd: jd_prepare at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/tjpgd.c:1020
+--- 0x4203861f: decoder_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:112
+--- 0x4201a6fa: image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:343
+--- 0x4201a7f9: lv_image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:86
+--- 0x4202d5ee: lv_image_set_src at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/image/lv_image.c:185
+--- 0x42009ef4: page_lock_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/lock_page.c:139
+--- 0x42009d7e: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:52
+--- 0x4205a38f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x40376004: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4205abdc: block_size at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:87
+---  (inlined by) block_is_last at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:98
+---  (inlined by) tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+[0m
+[0;33m--- 0x4205ab48: multi_heap_get_info_tlsf at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:392
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4205abd9: tlsf_walk_pool at /Users/wangjiaqi/esp/esp-idf/components/heap/tlsf/tlsf.c:211
+--- 0x4205aafd: multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:420 (discriminator 1)
+---  (inlined by) multi_heap_get_info_impl at /Users/wangjiaqi/esp/esp-idf/components/heap/multi_heap.c:409 (discriminator 1)
+--- 0x42003481: heap_caps_get_info at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:375
+--- 0x420034cd: heap_caps_get_largest_free_block at /Users/wangjiaqi/esp/esp-idf/components/heap/heap_caps.c:304
+--- 0x4038845b: get_buffer_malloc at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c:219
+--- 0x40387f66: esp_flash_read at /Users/wangjiaqi/esp/esp-idf/components/spi_flash/esp_flash_api.c:877
+--- 0x4203e909: esp_partition_read at /Users/wangjiaqi/esp/esp-idf/components/esp_partition/partition_target.c:38
+--- 0x4200b1bb: spiffs_api_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs_api.c:27
+--- 0x4200eb23: spiffs_phys_rd at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_cache.c:161
+--- 0x4200c31a: spiffs_page_data_check at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:20
+--- 0x4200e5e8: spiffs_object_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c:2052
+--- 0x4200b878: spiffs_hydro_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:414
+---  (inlined by) SPIFFS_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c:426
+--- 0x4200b008: vfs_spiffs_read at /Users/wangjiaqi/esp/esp-idf/components/spiffs/esp_spiffs.c:573
+--- 0x42008dd9: esp_vfs_read at /Users/wangjiaqi/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 3)
+--- 0x42049007: __sread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:47
+--- 0x42048ef6: __srefill_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/refill.c:115
+--- 0x42048976: _fread_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:228
+--- 0x420489f9: fread at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c:266 (discriminator 1)
+--- 0x4203836a: fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/fsdrv/lv_fs_stdio.c:162
+--- 0x42023571: lv_fs_read at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_fs.c:207
+--- 0x420385d1: input_func at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:135
+--- 0x42038efd: jd_prepare at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/tjpgd.c:1020
+--- 0x4203861f: decoder_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/libs/tjpgd/lv_tjpgd.c:112
+--- 0x4201a6fa: image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:343
+--- 0x4201a7f9: lv_image_decoder_get_info at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/draw/lv_image_decoder.c:86
+--- 0x4202d5ee: lv_image_set_src at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/image/lv_image.c:185
+--- 0x42009ef4: page_lock_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/lock_page.c:139
+--- 0x42009d7e: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:52
+--- 0x4205a38f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x40376004: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[1;31m--- Error: read failed: [Errno 6] Device not configured[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m

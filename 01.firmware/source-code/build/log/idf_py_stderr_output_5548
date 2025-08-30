@@ -1,0 +1,57 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbmodem1101 2000000[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x420094a7: s_test_psram at /Users/wangjiaqi/esp/esp-idf/components/esp_psram/esp_psram.c:472
+[0m
+[0;33m--- 0x4206935b: task_wdt_timeout_handling at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+---  (inlined by) task_wdt_isr at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x403898b5: _xt_lowint1 at /Users/wangjiaqi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4202060c: lv_inv_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_refr.c:274
+--- 0x4201bb52: lv_obj_invalidate_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:838 (discriminator 1)
+--- 0x4201bb81: lv_obj_invalidate at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:854
+--- 0x420374b7: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:1175
+--- 0x420378fa: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:149 (discriminator 1)
+---  (inlined by) lv_label_set_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:175 (discriminator 1)
+--- 0x42037aa5: lv_label_constructor at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:704
+--- 0x4201a7b2: lv_obj_construct at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:192 (discriminator 1)
+---  (inlined by) lv_obj_class_init_obj at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:112 (discriminator 1)
+--- 0x420378c7: lv_label_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:127
+--- 0x42009b02: my_sd_mount at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/video_audio.c:538 (discriminator 1)
+--- 0x420098fa: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:6
+--- 0x420696d3: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x4206935b: task_wdt_timeout_handling at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+---  (inlined by) task_wdt_isr at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x403898b5: _xt_lowint1 at /Users/wangjiaqi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4202060c: lv_inv_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_refr.c:274
+--- 0x4201bb52: lv_obj_invalidate_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:838 (discriminator 1)
+--- 0x4201bb81: lv_obj_invalidate at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:854
+--- 0x420374b7: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:1175
+--- 0x420378fa: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:149 (discriminator 1)
+---  (inlined by) lv_label_set_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:175 (discriminator 1)
+--- 0x42037aa5: lv_label_constructor at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:704
+--- 0x4201a7b2: lv_obj_construct at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:192 (discriminator 1)
+---  (inlined by) lv_obj_class_init_obj at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:112 (discriminator 1)
+--- 0x420378c7: lv_label_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:127
+--- 0x42009b02: my_sd_mount at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/video_audio.c:538 (discriminator 1)
+--- 0x420098fa: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:6
+--- 0x420696d3: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x4206935b: task_wdt_timeout_handling at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+---  (inlined by) task_wdt_isr at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x403898b5: _xt_lowint1 at /Users/wangjiaqi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4202060c: lv_inv_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_refr.c:274
+--- 0x4201bb52: lv_obj_invalidate_area at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:838 (discriminator 1)
+--- 0x4201bb81: lv_obj_invalidate at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:854
+--- 0x420374b7: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:1175
+--- 0x420378fa: lv_label_refr_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:149 (discriminator 1)
+---  (inlined by) lv_label_set_text at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:175 (discriminator 1)
+--- 0x42037aa5: lv_label_constructor at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:704
+--- 0x4201a7b2: lv_obj_construct at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:192 (discriminator 1)
+---  (inlined by) lv_obj_class_init_obj at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_class.c:112 (discriminator 1)
+--- 0x420378c7: lv_label_create at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/label/lv_label.c:127
+--- 0x42009b02: my_sd_mount at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/video_audio.c:538 (discriminator 1)
+--- 0x420098fa: app_main at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/main.c:6
+--- 0x420696d3: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m--- 0x4206935b: task_wdt_timeout_handling at /Users/wangjiaqi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+---  (inlined by) task_wdt_isr at /Users/wangjia

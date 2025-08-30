@@ -1,0 +1,269 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009c63
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (28) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (28) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (29) boot: Partition Table:[0m
+[0;32mI (29) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (30) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (31) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=304c4h (197828) map[0m
+[0;32mI (61) esp_image: segment 1: paddr=000404ec vaddr=3fcab600 size=033bch ( 13244) load[0m
+[0;32mI (64) esp_image: segment 2: paddr=000438b0 vaddr=40374000 size=0c768h ( 51048) load[0m
+[0;32mI (74) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=7b454h (504916) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=000cb47c vaddr=40380768 size=1ae40h (110144) load[0m
+[0;32mI (170) esp_image: segment 5: paddr=000e62c4 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (186) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (186) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (187) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (187) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (187) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (187) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (188) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (188) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (188) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (188) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (189) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (189) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (190) esp_psram: Speed: 80MHz[0m
+[0;32mI (209) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (249) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (624) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (633) cpu_start: Pro cpu start user code[0m
+[0;32mI (633) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (633) app_init: Application information:[0m
+[0;32mI (633) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (633) app_init: App version:      040a745-dirty[0m
+[0;32mI (633) app_init: Compile time:     Aug 30 2025 21:21:47[0m
+[0;32mI (633) app_init: ELF file SHA256:  d95ecf31c...[0m
+[0;32mI (634) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (634) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (634) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (634) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (635) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (635) heap_init: At 3FCAF8C0 len 00039E50 (231 KiB): RAM[0m
+[0;32mI (635) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (636) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (636) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (636) esp_psram: Adding pool of 7424K of PSRAM memory to heap allocator[0m
+[0;32mI (637) spi_flash: detected chip: gd[0m
+[0;32mI (637) spi_flash: flash io: qio[0m
+[0;33mW (637) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (638) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (638) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (640) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (640) main_task: Calling app_main()[0m
+[0;32mI (820) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 493968[0m
+[0;32mI (820) main: spiffs mounted[0m
+[0;32mI (820) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (825) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (827) spiffs: FILE: /spiffs/cute1.jpg (size=69327)[0m
+[0;32mI (831) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (834) spiffs: FILE: /spiffs/nr/mt1.jpg (size=60553)[0m
+[0;32mI (836) spiffs: FILE: /spiffs/nr/mt2.jpg (size=63042)[0m
+[0;32mI (839) spiffs: FILE: /spiffs/nr/zyq.jpg (size=38545)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (842) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (955) LVGL: Starting LVGL task[0m
+[0;32mI (955) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (955) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (956) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1280) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1281) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1281) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1317) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1780) main_task: Returned from app_main()[0m
+[0;32mI (3229) gesture: 上滑[0m
+[0;32mI (4537) main_page: Video 被点击[0m
+[0;32mI (4549) ES8311: Work in Slave mode[0m
+[0;32mI (4552) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4555) ES7210: Work in Slave mode[0m
+[0;32mI (4567) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (4570) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (4585) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (4586) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (4602) Adev_Codec: Open codec device OK[0m
+[0;32mI (4602) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (4602) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (4604) ES7210: Bits 16[0m
+[0;32mI (4617) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (4620) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (4632) ES7210: Unmuted[0m
+[0;32mI (4633) Adev_Codec: Open codec device OK[0m
+[0;32mI (4633) bsp_extra_board: Setting volume: 80[0m
+[0;33mW (4668) ESP32-S3-Touch-AMOLED-2.06: Warning: Long filenames on SD card are disabled in menuconfig![0m
+[0;32mI (4673) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (4673) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (4674) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (4726) video_audio: Found 2 AVI files in /sdcard/am_nr[0m
+[0;32mI (4727) video_audio: AVI[1/2]: /sdcard/am_nr/QJ1.AVI[0m
+[0;32mI (4727) video_audio: AVI[2/2]: /sdcard/am_nr/GC1.AVI[0m
+[0;32mI (4781) video_audio: SD mounted, found 2 AVI files[0m
+[0;32mI (4794) avi player: AVI Player Version: 2.0.0[0m
+[1;31mE (4794) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (5099) avifile: Find a video stream[0m
+[0;32mI (5099) avifile: movi pos:5678, size:27735274[0m
+[0;33mW (5099) video_audio: Using default sample rate: 16000[0m
+[0;33mW (5099) video_audio: Using default bit width: 16[0m
+[0;32mI (5100) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=0[0m
+[0;32mI (5105) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (5110) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (5110) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (5110) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (5125) Adev_Codec: Open codec device OK[0m
+[1;31mE (5126) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (5126) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (5126) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (5127) ES7210: Bits 16[0m
+[0;32mI (5134) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (5137) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (5144) ES7210: Unmuted[0m
+[0;32mI (5145) Adev_Codec: Open codec device OK[0m
+[0;32mI (5223) video_cb: Frame 1 (320x200)[0m
+[0;32mI (6274) video_cb: Frame 31 (320x200)[0m
+[0;32mI (7322) video_cb: Frame 61 (320x200)[0m
+[0;32mI (8490) video_cb: Frame 91 (320x200)[0m
+[0;32mI (9679) video_cb: Frame 121 (320x200)[0m
+[0;32mI (10812) video_cb: Frame 151 (320x200)[0m
+[0;32mI (11906) video_cb: Frame 181 (320x200)[0m
+[0;32mI (12954) video_cb: Frame 211 (320x200)[0m
+[0;32mI (14015) video_cb: Frame 241 (320x200)[0m
+[0;32mI (15089) video_cb: Frame 271 (320x200)[0m
+[0;32mI (16178) video_cb: Frame 301 (320x200)[0m
+[0;32mI (17286) video_cb: Frame 331 (320x200)[0m
+[0;32mI (18338) video_cb: Frame 361 (320x200)[0m
+[0;32mI (19308) video_cb: Frame 391 (320x200)[0m
+[0;32mI (20314) video_cb: Frame 421 (320x200)[0m
+[0;32mI (21369) video_cb: Frame 451 (320x200)[0m
+[0;32mI (22526) video_cb: Frame 481 (320x200)[0m
+[0;32mI (23751) video_cb: Frame 511 (320x200)[0m
+[0;32mI (24948) video_cb: Frame 541 (320x200)[0m
+[0;32mI (26130) video_cb: Frame 571 (320x200)[0m
+[0;32mI (27322) video_cb: Frame 601 (320x200)[0m
+[0;32mI (28464) video_cb: Frame 631 (320x200)[0m
+[0;32mI (29569) video_cb: Frame 661 (320x200)[0m
+[0;32mI (30707) video_cb: Frame 691 (320x200)[0m
+[0;32mI (31861) video_cb: Frame 721 (320x200)[0m
+[0;32mI (33003) video_cb: Frame 751 (320x200)[0m
+[0;32mI (34165) video_cb: Frame 781 (320x200)[0m
+[0;32mI (35374) video_cb: Frame 811 (320x200)[0m
+[0;32mI (36618) video_cb: Frame 841 (320x200)[0m
+[0;32mI (37855) video_cb: Frame 871 (320x200)[0m
+[0;32mI (39118) video_cb: Frame 901 (320x200)[0m
+[0;32mI (40364) video_cb: Frame 931 (320x200)[0m
+[0;32mI (41617) video_cb: Frame 961 (320x200)[0m
+[0;32mI (42860) video_cb: Frame 991 (320x200)[0m
+[0;32mI (44097) video_cb: Frame 1021 (320x200)[0m
+[0;32mI (45333) video_cb: Frame 1051 (320x200)[0m
+[0;32mI (46580) video_cb: Frame 1081 (320x200)[0m
+[0;32mI (47827) video_cb: Frame 1111 (320x200)[0m
+[0;32mI (49084) video_cb: Frame 1141 (320x200)[0m
+[0;32mI (50348) video_cb: Frame 1171 (320x200)[0m
+[0;32mI (51619) video_cb: Frame 1201 (320x200)[0m
+[0;32mI (52880) video_cb: Frame 1231 (320x200)[0m
+[0;32mI (54136) video_cb: Frame 1261 (320x200)[0m
+[0;32mI (55362) video_cb: Frame 1291 (320x200)[0m
+[0;32mI (56583) video_cb: Frame 1321 (320x200)[0m
+[0;32mI (57805) video_cb: Frame 1351 (320x200)[0m
+[0;32mI (59049) video_cb: Frame 1381 (320x200)[0m
+[0;32mI (60308) video_cb: Frame 1411 (320x200)[0m
+[0;32mI (61463) video_cb: Frame 1441 (320x200)[0m
+[0;32mI (62701) video_cb: Frame 1471 (320x200)[0m
+[0;32mI (63839) video_cb: Frame 1501 (320x200)[0m
+[0;32mI (64942) video_cb: Frame 1531 (320x200)[0m
+[0;32mI (65933) video_cb: Frame 1561 (320x200)[0m
+[0;32mI (66954) video_cb: Frame 1591 (320x200)[0m
+[0;32mI (67942) video_cb: Frame 1621 (320x200)[0m
+[0;32mI (69037) video_cb: Frame 1651 (320x200)[0m
+[0;32mI (70188) video_cb: Frame 1681 (320x200)[0m
+[0;32mI (71349) video_cb: Frame 1711 (320x200)[0m
+[0;32mI (72511) video_cb: Frame 1741 (320x200)[0m
+[0;32mI (73606) video_cb: Frame 1771 (320x200)[0m
+[0;32mI (74717) video_cb: Frame 1801 (320x200)[0m
+[0;32mI (75819) video_cb: Frame 1831 (320x200)[0m
+[0;32mI (76908) video_cb: Frame 1861 (320x200)[0m
+[0;32mI (77986) video_cb: Frame 1891 (320x200)[0m
+[0;32mI (79083) video_cb: Frame 1921 (320x200)[0m
+[0;32mI (80198) video_cb: Frame 1951 (320x200)[0m
+[0;32mI (81328) video_cb: Frame 1981 (320x200)[0m
+[0;32mI (82459) video_cb: Frame 2011 (320x200)[0m
+[0;32mI (83610) video_cb: Frame 2041 (320x200)[0m
+[0;32mI (84770) video_cb: Frame 2071 (320x200)[0m
+[0;32mI (85324) avi player: play end[0m
+[0;32mI (85324) video_audio: AVI playback finished[0m
+[1;31mE (85344) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[1;31mE (85444) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (85749) avifile: Find a video stream[0m
+[0;32mI (85750) avifile: Find a audio stream[0m
+[0;32mI (85750) avifile: movi pos:9906, size:28397078[0m
+[0;32mI (85750) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (85755) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (85760) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (85760) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (85761) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (85776) Adev_Codec: Open codec device OK[0m
+[1;31mE (85776) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (85776) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (85776) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (85777) ES7210: Bits 16[0m
+[0;32mI (85785) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (85787) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (85795) ES7210: Unmuted[0m
+[0;32mI (85795) Adev_Codec: Open codec device OK[0m
+[0;32mI (86506) video_cb: Frame 2101 (320x200)[0m
+[0;32mI (87765) video_cb: Frame 2131 (320x200)[0m
+[0;32mI (89036) video_cb: Frame 2161 (320x200)[0m
+[0;32mI (90302) video_cb: Frame 2191 (320x200)[0m
+[0;32mI (91560) video_cb: Frame 2221 (320x200)[0m
+[0;32mI (92840) video_cb: Frame 2251 (320x200)[0m
+[0;32mI (94147) video_cb: Frame 2281 (320x200)[0m
+[0;32mI (95446) video_cb: Frame 2311 (320x200)[0m
+[0;32mI (96725) video_cb: Frame 2341 (320x200)[0m
+[0;32mI (98000) video_cb: Frame 2371 (320x200)[0m
+[0;32mI (99273) video_cb: Frame 2401 (320x200)[0m
+[0;32mI (100547) video_cb: Frame 2431 (320x200)[0m
+[0;32mI (101820) video_cb: Frame 2461 (320x200)[0m
+[0;32mI (103094) video_cb: Frame 2491 (320x200)[0m
+[0;32mI (104380) video_cb: Frame 2521 (320x200)[0m
+[0;32mI (105648) video_cb: Frame 2551 (320x200)[0m
+[0;32mI (106942) video_cb: Frame 2581 (320x200)[0m
+[0;32mI (108238) video_cb: Frame 2611 (320x200)[0m
+[0;32mI (109553) video_cb: Frame 2641 (320x200)[0m
+[0;32mI (110866) video_cb: Frame 2671 (320x200)[0m
+[0;32mI (112217) video_cb: Frame 2701 (320x200)[0m
+[0;32mI (113543) video_cb: Frame 2731 (320x200)[0m
+[0;32mI (114838) video_cb: Frame 2761 (320x200)[0m
+[0;32mI (116155) video_cb: Frame 2791 (320x200)[0m
+[0;32mI (117460) video_cb: Frame 2821 (320x200)[0m
+[0;32mI (118746) video_cb: Frame 2851 (320x200)[0m
+[0;32mI (120046) video_cb: Frame 2881 (320x200)[0m
+[0;32mI (121355) video_cb: Frame 2911 (320x200)[0m
+[0;32mI (122676) video_cb: Frame 2941 (320x200)[0m
+[0;32mI (123964) video_cb: Frame 2971 (320x200)[0m
+[0;32mI (125266) video_cb: Frame 3001 (320x200)[0m
+[0;32mI (126585) video_cb: Frame 

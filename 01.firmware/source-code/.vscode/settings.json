@@ -2,6 +2,10 @@
   "C_Cpp.intelliSenseEngine": "default",
   "files.associations": {
     "bsp_board_extra.h": "c",
-    "display.h": "c"
+    "display.h": "c",
+    "esp_codec_dev_defaults.h": "c",
+    "esp-bsp.h": "c",
+    "ui.h": "c",
+    "lvgl.h": "c"
   }
 }
