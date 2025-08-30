@@ -1,0 +1,7 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "bsp_board_extra.h": "c",
+    "display.h": "c"
+  }
+}

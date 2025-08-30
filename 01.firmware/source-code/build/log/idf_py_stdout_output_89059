@@ -1,0 +1,62 @@
+[1/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[2/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_1.c.obj
+[3/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_4_large.c.obj
+[4/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_1_large.c.obj
+[5/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_4.c.obj
+[6/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_list_border.c.obj
+[7/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_3.c.obj
+[8/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_2.c.obj
+[9/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_3_large.c.obj
+[10/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_icon_2_large.c.obj
+[11/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_list_border_large.c.obj
+[12/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_slider_knob_large.c.obj
+[13/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/lv_demo_music_list.c.obj
+[14/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/lv_demo_music.c.obj
+[15/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_slider_knob.c.obj
+[16/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_wave_top.c.obj
+[17/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.c.obj
+[18/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_logo.c.obj
+[19/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_wave_bottom_large.c.obj
+[20/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/assets/img_lv_demo_music_wave_bottom.c.obj
+[21/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_l8.c.obj
+[22/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_argb8888.c.obj
+[23/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_xrgb8888.c.obj
+[24/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_arc_bg.c.obj
+[25/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_i1.c.obj
+[26/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_rgb565.c.obj
+[27/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/assets/img_render_lvgl_logo_rgb888.c.obj
+[28/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/music/lv_demo_music_main.c.obj
+[29/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/scroll/lv_demo_scroll.c.obj
+[30/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/transform/lv_demo_transform.c.obj
+[31/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/vector_graphic/lv_demo_vector_graphic.c.obj
+[32/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/widgets/assets/img_demo_widgets_needle.c.obj
+[33/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/transform/assets/img_transform_avatar_15.c.obj
+[34/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/widgets/assets/img_clothes.c.obj
+[35/51] Linking C static library esp-idf/bsp_extra/libbsp_extra.a
+[36/51] Performing build step for 'bootloader'
+[1/1] cd /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader/bootloader.bin
+Bootloader binary size 0x57c0 bytes. 0x2840 bytes (31%) free.
+[37/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/widgets/assets/img_lvgl_logo.c.obj
+[38/51] No install step for 'bootloader'
+[39/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/stress/lv_demo_stress.c.obj
+[40/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/render/lv_demo_render.c.obj
+[41/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/widgets/assets/img_demo_widgets_avatar.c.obj
+[42/51] Completed 'bootloader'
+[43/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/vector_graphic/assets/img_demo_vector_avatar.c.obj
+[44/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/video_audio.c.obj
+[45/51] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/managed_components/lvgl__lvgl/demos/widgets/lv_demo_widgets.c.obj
+[46/51] Linking C static library esp-idf/main/libmain.a
+[47/51] Generating ld/sections.ld
+info: INFO: Symbol BSP_I2S_NUM defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/components/bsp_extra/Kconfig:2
+    /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/managed_components/waveshare__esp32_s3_touch_amoled_2_06/Kconfig:115
+[48/51] Building C object CMakeFiles/lvgl_demo_v9.elf.dir/project_elf_src_esp32s3.c.obj
+[49/51] Linking CXX executable lvgl_demo_v9.elf
+[50/51] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/lvgl_demo_v9.bin
+[51/51] cd /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/partition_table/partition-table.bin /Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/lvgl_demo_v9.bin
+lvgl_demo_v9.bin binary size 0xc3100 bytes. Smallest app partition is 0x800000 bytes. 0x73cf00 bytes (90%) free.

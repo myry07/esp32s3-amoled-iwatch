@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/wangjiaqi/Documents/ESP32-S3-Touch-AMOLED-2.06-Demos/ESP-IDF-v5.4.2/06_videoplayer/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
