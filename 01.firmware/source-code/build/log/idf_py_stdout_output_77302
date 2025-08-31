@@ -1,0 +1,644 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009dbf
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (28) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (28) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (29) boot: Partition Table:[0m
+[0;32mI (29) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (30) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (31) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=3e7bch (255932) map[0m
+[0;32mI (70) esp_image: segment 1: paddr=0004e7e4 vaddr=3fcab600 size=01834h (  6196) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=807bch (526268) map[0m
+[0;32mI (150) esp_image: segment 3: paddr=000d07e4 vaddr=3fcace34 size=01b88h (  7048) load[0m
+[0;32mI (151) esp_image: segment 4: paddr=000d2374 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000f9924 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (198) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (198) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (198) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (198) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (199) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (199) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (199) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (199) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (200) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (200) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (200) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (201) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (201) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (201) esp_psram: Speed: 80MHz[0m
+[0;32mI (221) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (266) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (638) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (646) cpu_start: Pro cpu start user code[0m
+[0;32mI (646) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (646) app_init: Application information:[0m
+[0;32mI (646) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (647) app_init: App version:      495ea42-dirty[0m
+[0;32mI (647) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (647) app_init: ELF file SHA256:  9f50046c7...[0m
+[0;32mI (647) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (647) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (648) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (648) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (648) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (649) heap_init: At 3FCAF910 len 00039E00 (231 KiB): RAM[0m
+[0;32mI (649) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (649) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (649) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (650) esp_psram: Adding pool of 7360K of PSRAM memory to heap allocator[0m
+[0;32mI (650) spi_flash: detected chip: gd[0m
+[0;32mI (650) spi_flash: flash io: qio[0m
+[0;33mW (651) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (651) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (652) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (652) main_task: Started on CPU0[0m
+[0;32mI (653) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (653) main_task: Calling app_main()[0m
+[0;32mI (833) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 538144[0m
+[0;32mI (833) main: spiffs mounted[0m
+[0;32mI (833) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (838) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/cute1.jpg (size=73244)[0m
+[0;32mI (844) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (847) spiffs: FILE: /spiffs/nr/mt1.jpg (size=74244)[0m
+[0;32mI (850) spiffs: FILE: /spiffs/nr/mt2.jpg (size=74797)[0m
+[0;32mI (853) spiffs: FILE: /spiffs/nr/zyq.jpg (size=43460)[0m
+[0;32mI (855) spiffs: FILE: /spiffs/btns/game1.jpg (size=3088)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (857) spiffs: FILE: /spiffs/btns/setting.jpg (size=6485)[0m
+[0;32mI (969) LVGL: Starting LVGL task[0m
+[0;32mI (970) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (970) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (970) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1295) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1296) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1296) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1332) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1806) main_task: Returned from app_main()[0m
+[0;32mI (4208) gesture: 上滑[0m
+[0;32mI (5722) gesture: 左滑[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207a8cb  PS      : 0x00060030  A0      : 0x8204b77f  A1      : 0x3fcb8120  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x00000016  A5      : 0x3fcb80a4  
+A6      : 0x3c1774d4  A7      : 0x3c0fccd4  A8      : 0x00000000  A9      : 0x3fcb8050  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x00000016  A13     : 0x00000000  
+A14     : 0x00000028  A15     : 0x3c0e70b0  SAR     : 0x0000001b  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000008  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4207a8c8:0x3fcb8120 0x4204b77c:0x3fcb8140 0x4200be90:0x3fcb8160 0x420393fd:0x3fcb8180 0x42026f8c:0x3fcb81b0 0x42027000:0x3fcb81d0 0x420287f7:0x3fcb8210 0x42028885:0x3fcb8290 0x42028871:0x3fcb82b0 0x42028871:0x3fcb82d0 0x42028871:0x3fcb82f0 0x42028ec7:0x3fcb8310 0x4202c7a7:0x3fcb8330 0x4203a696:0x3fcb83c0 0x4203a7f9:0x3fcb83f0 0x4202498c:0x3fcb8410
+
+
+
+
+ELF file SHA256: 9f50046c7
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037608c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (27) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (28) boot: Partition Table:[0m
+[0;32mI (28) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (30) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=3e7bch (255932) map[0m
+[0;32mI (69) esp_image: segment 1: paddr=0004e7e4 vaddr=3fcab600 size=01834h (  6196) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=807bch (526268) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=000d07e4 vaddr=3fcace34 size=01b88h (  7048) load[0m
+[0;32mI (151) esp_image: segment 4: paddr=000d2374 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000f9924 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (197) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (198) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (198) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (198) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (199) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (199) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (199) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (199) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (200) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (200) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (201) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (201) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (201) esp_psram: Speed: 80MHz[0m
+[0;32mI (220) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (266) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (646) cpu_start: Pro cpu start user code[0m
+[0;32mI (646) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (646) app_init: Application information:[0m
+[0;32mI (646) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (646) app_init: App version:      495ea42-dirty[0m
+[0;32mI (646) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (647) app_init: ELF file SHA256:  9f50046c7...[0m
+[0;32mI (647) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (647) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (647) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (647) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (648) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (648) heap_init: At 3FCAF910 len 00039E00 (231 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (649) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (649) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (649) esp_psram: Adding pool of 7360K of PSRAM memory to heap allocator[0m
+[0;32mI (650) spi_flash: detected chip: gd[0m
+[0;32mI (650) spi_flash: flash io: qio[0m
+[0;33mW (650) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (651) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (651) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (652) main_task: Started on CPU0[0m
+[0;32mI (653) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (653) main_task: Calling app_main()[0m
+[0;32mI (833) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 538144[0m
+[0;32mI (833) main: spiffs mounted[0m
+[0;32mI (833) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (838) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/cute1.jpg (size=73244)[0m
+[0;32mI (844) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (847) spiffs: FILE: /spiffs/nr/mt1.jpg (size=74244)[0m
+[0;32mI (850) spiffs: FILE: /spiffs/nr/mt2.jpg (size=74797)[0m
+[0;32mI (853) spiffs: FILE: /spiffs/nr/zyq.jpg (size=43460)[0m
+[0;32mI (855) spiffs: FILE: /spiffs/btns/game1.jpg (size=3088)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (857) spiffs: FILE: /spiffs/btns/setting.jpg (size=6485)[0m
+[0;32mI (969) LVGL: Starting LVGL task[0m
+[0;32mI (970) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (970) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (970) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1295) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1296) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1296) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1332) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1806) main_task: Returned from app_main()[0m
+[0;32mI (7174) gesture: 上滑[0m
+[0;32mI (9741) gesture: 左滑[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207a8cb  PS      : 0x00060e30  A0      : 0x8204b77f  A1      : 0x3fcb8120  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x00000016  A5      : 0x3fcb80a4  
+A6      : 0x3c1774d4  A7      : 0x3c0fccd4  A8      : 0x00000000  A9      : 0x3fcb8050  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x00000016  A13     : 0x00000000  
+A14     : 0x00000028  A15     : 0x3c0e70b0  SAR     : 0x0000001b  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000008  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4207a8c8:0x3fcb8120 0x4204b77c:0x3fcb8140 0x4200be90:0x3fcb8160 0x420393fd:0x3fcb8180 0x42026f8c:0x3fcb81b0 0x42027000:0x3fcb81d0 0x420287f7:0x3fcb8210 0x42028885:0x3fcb8290 0x42028871:0x3fcb82b0 0x42028871:0x3fcb82d0 0x42028871:0x3fcb82f0 0x42028ec7:0x3fcb8310 0x4202c7a7:0x3fcb8330 0x4203a696:0x3fcb83c0 0x4203a7f9:0x3fcb83f0 0x4202498c:0x3fcb8410
+
+
+
+
+ELF file SHA256: 9f50046c7
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037608c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (27) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (28) boot: Partition Table:[0m
+[0;32mI (28) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (29) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (30) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=3e7bch (255932) map[0m
+[0;32mI (69) esp_image: segment 1: paddr=0004e7e4 vaddr=3fcab600 size=01834h (  6196) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=807bch (526268) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=000d07e4 vaddr=3fcace34 size=01b88h (  7048) load[0m
+[0;32mI (151) esp_image: segment 4: paddr=000d2374 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (181) esp_image: segment 5: paddr=000f9924 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (197) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (197) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (198) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (198) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (198) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (198) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (199) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (199) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (199) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (200) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (201) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (201) esp_psram: Speed: 80MHz[0m
+[0;32mI (220) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (266) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (646) cpu_start: Pro cpu start user code[0m
+[0;32mI (646) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (646) app_init: Application information:[0m
+[0;32mI (646) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (646) app_init: App version:      495ea42-dirty[0m
+[0;32mI (646) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (646) app_init: ELF file SHA256:  9f50046c7...[0m
+[0;32mI (647) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (647) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (647) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (647) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (648) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (648) heap_init: At 3FCAF910 len 00039E00 (231 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (649) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (649) esp_psram: Adding pool of 7360K of PSRAM memory to heap allocator[0m
+[0;32mI (650) spi_flash: detected chip: gd[0m
+[0;32mI (650) spi_flash: flash io: qio[0m
+[0;33mW (650) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (651) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (651) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (652) main_task: Started on CPU0[0m
+[0;32mI (653) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (653) main_task: Calling app_main()[0m
+[0;32mI (833) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 538144[0m
+[0;32mI (833) main: spiffs mounted[0m
+[0;32mI (833) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (838) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/cute1.jpg (size=73244)[0m
+[0;32mI (844) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (847) spiffs: FILE: /spiffs/nr/mt1.jpg (size=74244)[0m
+[0;32mI (850) spiffs: FILE: /spiffs/nr/mt2.jpg (size=74797)[0m
+[0;32mI (853) spiffs: FILE: /spiffs/nr/zyq.jpg (size=43460)[0m
+[0;32mI (855) spiffs: FILE: /spiffs/btns/game1.jpg (size=3088)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (857) spiffs: FILE: /spiffs/btns/setting.jpg (size=6485)[0m
+[0;32mI (969) LVGL: Starting LVGL task[0m
+[0;32mI (970) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (970) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (970) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1295) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1296) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1296) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1332) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1806) main_task: Returned from app_main()[0m
+[0;32mI (78576) gesture: 上滑[0m
+[0;32mI (79624) main_page: Video 被点击[0m
+[0;32mI (79638) ES8311: Work in Slave mode[0m
+[0;32mI (79641) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (79644) ES7210: Work in Slave mode[0m
+[0;32mI (79658) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (79661) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (79676) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (79677) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (79693) Adev_Codec: Open codec device OK[0m
+[0;32mI (79694) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (79694) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (79695) ES7210: Bits 16[0m
+[0;32mI (79708) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (79711) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (79724) ES7210: Unmuted[0m
+[0;32mI (79724) Adev_Codec: Open codec device OK[0m
+[0;32mI (79724) bsp_extra_board: Setting volume: 80[0m
+[0;33mW (79761) ESP32-S3-Touch-AMOLED-2.06: Warning: Long filenames on SD card are disabled in menuconfig![0m
+[0;32mI (79765) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (79765) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (79766) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (79821) video_audio: Found 12 AVI files in /sdcard/am_nr[0m
+[0;32mI (79821) video_audio: AVI[1/12]: /sdcard/am_nr/TEST1.AVI[0m
+[0;32mI (79821) video_audio: AVI[2/12]: /sdcard/am_nr/QJ1.AVI[0m
+[0;32mI (79821) video_audio: AVI[3/12]: /sdcard/am_nr/GC1.AVI[0m
+[0;32mI (79821) video_audio: AVI[4/12]: /sdcard/am_nr/_TEST~6.AVI[0m
+[0;32mI (79822) video_audio: AVI[5/12]: /sdcard/am_nr/TEST2.AVI[0m
+[0;32mI (79822) video_audio: AVI[6/12]: /sdcard/am_nr/_TEST~6.AVI[0m
+[0;32mI (79822) video_audio: AVI[7/12]: /sdcard/am_nr/TEST3.AVI[0m
+[0;32mI (79823) video_audio: AVI[8/12]: /sdcard/am_nr/_TEST~7.AVI[0m
+[0;32mI (79823) video_audio: AVI[9/12]: /sdcard/am_nr/TEST4.AVI[0m
+[0;32mI (79823) video_audio: AVI[10/12]: /sdcard/am_nr/_TEST~8.AVI[0m
+[0;32mI (79824) video_audio: AVI[11/12]: /sdcard/am_nr/TEST5.AVI[0m
+[0;32mI (79824) video_audio: AVI[12/12]: /sdcard/am_nr/_TEST~9.AVI[0m
+[0;32mI (79874) video_audio: SD mounted, found 12 AVI files[0m
+[0;32mI (79888) avi player: AVI Player Version: 2.0.0[0m
+[1;31mE (79888) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (80182) avifile: Find a video stream[0m
+[0;32mI (80182) avifile: movi pos:5678, size:3242458[0m
+[0;33mW (80182) video_audio: Using default sample rate: 16000[0m
+[0;33mW (80182) video_audio: Using default bit width: 16[0m
+[0;32mI (80182) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=0[0m
+[0;32mI (80188) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (80195) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (80195) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (80195) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (80210) Adev_Codec: Open codec device OK[0m
+[1;31mE (80210) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (80211) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (80211) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (80212) ES7210: Bits 16[0m
+[0;32mI (80219) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (80222) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (80229) ES7210: Unmuted[0m
+[0;32mI (80229) Adev_Codec: Open codec device OK[0m
+[0;32mI (80320) video_cb: Frame 1 (320x200)[0m
+[0;32mI (81826) video_cb: Frame 31 (320x200)[0m
+[0;32mI (82088) video_audio: AVI playback finished[0m
+[0;32mI (82388) avifile: Find a video stream[0m
+[0;32mI (82388) avifile: Find a audio stream[0m
+[0;32mI (82389) avifile: movi pos:9906, size:28397078[0m
+[0;32mI (82389) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (82394) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (82399) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (82399) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (82400) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (82415) Adev_Codec: Open codec device OK[0m
+[1;31mE (82415) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (82415) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (82415) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (82416) ES7210: Bits 16[0m
+[0;32mI (82424) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (82426) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (82434) ES7210: Unmuted[0m
+[0;32mI (82434) Adev_Codec: Open codec device OK[0m
+[0;32mI (83512) video_cb: Frame 61 (320x200)[0m
+[0;32mI (84327) video_audio: AVI playback finished[0m
+[0;32mI (84328) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (84329) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (84329) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (86272) btn: 点击事件[0m
+[0;32mI (86592) gesture: 左滑[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207a8cb  PS      : 0x00060430  A0      : 0x8204b77f  A1      : 0x3fcb8120  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x00000016  A5      : 0x3fcb80a4  
+A6      : 0x3c178424  A7      : 0x3c0fcc28  A8      : 0x00000000  A9      : 0x3fcb8050  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x00000016  A13     : 0x00000000  
+A14     : 0x00000028  A15     : 0x3c0e70b0  SAR     : 0x0000001b  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000008  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4207a8c8:0x3fcb8120 0x4204b77c:0x3fcb8140 0x4200be90:0x3fcb8160 0x420393fd:0x3fcb8180 0x42026f8c:0x3fcb81b0 0x42027000:0x3fcb81d0 0x420287f7:0x3fcb8210 0x42028885:0x3fcb8290 0x42028871:0x3fcb82b0 0x42028871:0x3fcb82d0 0x42028871:0x3fcb82f0 0x42028ec7:0x3fcb8310 0x4202c7a7:0x3fcb8330 0x4203a696:0x3fcb83c0 0x4203a7f9:0x3fcb83f0 0x4202498c:0x3fcb8410
+
+
+
+
+ELF file SHA256: 9f50046c7
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037608c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (27) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (28) boot: Partition Table:[0m
+[0;32mI (28) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (29) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (30) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=3e7bch (255932) map[0m
+[0;32mI (69) esp_image: segment 1: paddr=0004e7e4 vaddr=3fcab600 size=01834h (  6196) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=807bch (526268) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=000d07e4 vaddr=3fcace34 size=01b88h (  7048) load[0m
+[0;32mI (151) esp_image: segment 4: paddr=000d2374 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (181) esp_image: segment 5: paddr=000f9924 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (197) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (197) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (198) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (198) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (198) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (198) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (199) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (199) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (199) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (200) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (201) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (201) esp_psram: Speed: 80MHz[0m
+[0;32mI (220) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (266) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (645) cpu_start: Pro cpu start user code[0m
+[0;32mI (645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (646) app_init: Application information:[0m
+[0;32mI (646) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (646) app_init: App version:      495ea42-dirty[0m
+[0;32mI (646) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (646) app_init: ELF file SHA256:  9f50046c7...[0m
+[0;32mI (646) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (647) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (647) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (647) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (647) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (648) heap_init: At 3FCAF910 len 00039E00 (231 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (649) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (649) esp_psram: Adding pool of 7360K of PSRAM memory to heap allocator[0m
+[0;32mI (650) spi_flash: detected chip: gd[0m
+[0;32mI (650) spi_flash: flash io: qio[0m
+[0;33mW (650) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (651) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (651) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (652) main_task: Started on CPU0[0m
+[0;32mI (653) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (653) main_task: Calling app_main()[0m
+[0;32mI (833) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 538144[0m
+[0;32mI (833) main: spiffs mounted[0m
+[0;32mI (833) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (838) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (841) spiffs: FILE: /spiffs/cute1.jpg (size=73244)[0m
+[0;32mI (844) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (847) spiffs: FILE: /spiffs/nr/mt1.jpg (size=74244)[0m
+[0;32mI (850) spiffs: FILE: /spiffs/nr/mt2.jpg (size=74797)[0m
+[0;32mI (853) spiffs: FILE: /spiffs/nr/zyq.jpg (size=43460)[0m
+[0;32mI (855) spiffs: FILE: /spiffs/btns/game1.jpg (size=3088)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (856) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (857) spiffs: FILE: /spiffs/btns/setting.jpg (size=6485)[0m
+[0;32mI (969) LVGL: Starting LVGL task[0m
+[0;32mI (970) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (970) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (970) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1295) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1296) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1296) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1332) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1806) main_task: Returned from app_main()[0m
+[0;32mI (3917) gesture: 上滑[0m
+[0;32mI (5281) gesture: 右滑[0m
+[0;32mI (5281) gesture: 左滑[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4207a8cb  PS      : 0x00060430  A0      : 0x8204b77f  A1      : 0x3fcb8120  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x00000016  A5      : 0x3fcb80a4  
+A6      : 0x3c1774d4  A7      : 0x3c0fccd4  A8      : 0x00000000  A9      : 0x3fcb8050  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x00000016  A13     : 0x00000000  
+A14     : 0x00000028  A15     : 0x3c0e70b0  SAR     : 0x0000001b  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000008  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4207a8c8:0x3fcb8120 0x4204b77c:0x3fcb8140 0x4200be90:0x3fcb8160 0x420393fd:0x3fcb8180 0x42026f8c:0x3fcb81b0 0x42027000:0x3fcb81d0 0x420287f7:0x3fcb8210 0x42028885:0x3fcb8290 0x42028871:0x3fcb82b0 0x42028871:0x3fcb82d0 0x42028871:0x3fcb82f0 0x42028ec7:0x3fcb8310 0x4202c7a7:0x3fcb8330 0x4203a696:0x3fcb83c0 0x4203a7f9:0x3fcb83f0 0x4202498c:0x3fcb8410
+
+
+
+
+ELF file SHA256: 9f50046c7
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037608c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (27) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (27) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (28) boot: Partition Table:[0m
+[0;32mI (28) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (29) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (30) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=3e7bch (255932) map[0m
+[0;32mI (69) esp_image: segment 1: paddr=0004e7e4 vaddr=3fcab600 size=01834h (  6196) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=807bch (526268) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=000d07e4 vaddr=3fcace34 size=01b88h (  7048) load[0m
+[0;32mI (151) esp_image: segment 4: paddr=000d2374 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (181) esp_image: segment 5: paddr=000f9924 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (197) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (197) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (198) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (198) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (198) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (199) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (199) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (199) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (200) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (200) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (201) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (201) esp_psram: Speed: 80MHz[0m
+[0;32mI (220) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (266) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (646) cpu_start: Pro cpu start user code[0m
+[0;32mI (646) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (646) app_init: Application information:[0m
+[0;32mI (646) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (646) app_init: App version:      495ea42-dirty[0m
+[0;32mI (646) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (646) app_init: ELF file SHA256:  9f50046c7...[0m
+[0;32mI (647) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (647) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (647) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (647) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (648) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (648) heap_init: At 3FCAF910 len 00039E00 (231 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (648) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (649) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m

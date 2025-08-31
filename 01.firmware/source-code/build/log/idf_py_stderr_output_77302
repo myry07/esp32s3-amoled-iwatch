@@ -1,0 +1,65 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbmodem1101 2000000[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x42009dbf: s_test_psram at /Users/wangjiaqi/esp/esp-idf/components/esp_psram/esp_psram.c:472
+[0m
+[0;33m--- 0x4207a8cb: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:335
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4207a8c8: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:332
+--- 0x4204b77c: lv_tabview_get_content at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/tabview/lv_tabview.c:255
+---  (inlined by) lv_tabview_add_tab at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/tabview/lv_tabview.c:73
+--- 0x4200be90: setting_btn_cb at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:150
+--- 0x420393fd: lv_event_send at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_event.c:77
+--- 0x42026f8c: event_send_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_event.c:367
+--- 0x42027000: lv_obj_send_event at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_event.c:67
+--- 0x420287f7: lv_obj_refr_size at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:194
+--- 0x42028885: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1137
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028ec7: lv_obj_update_layout at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:307
+---  (inlined by) lv_obj_update_layout at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:293
+--- 0x4202c7a7: lv_display_refr_timer at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_refr.c:381
+--- 0x4203a696: lv_timer_exec at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:326 (discriminator 2)
+---  (inlined by) lv_timer_handler at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:107 (discriminator 2)
+--- 0x4203a7f9: lv_timer_handler at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:71
+--- 0x4202498c: lvgl_port_task at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lvgl_port/src/lvgl9/esp_lvgl_port.c:262
+[0m
+[0;33m--- 0x4037608c: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4207a8cb: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:335
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4207a8c8: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:332
+--- 0x4204b77c: lv_tabview_get_content at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/tabview/lv_tabview.c:255
+---  (inlined by) lv_tabview_add_tab at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/widgets/tabview/lv_tabview.c:73
+--- 0x4200be90: setting_btn_cb at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:150
+--- 0x420393fd: lv_event_send at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_event.c:77
+--- 0x42026f8c: event_send_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_event.c:367
+--- 0x42027000: lv_obj_send_event at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_event.c:67
+--- 0x420287f7: lv_obj_refr_size at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:194
+--- 0x42028885: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1137
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028871: layout_update_core at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:1132
+--- 0x42028ec7: lv_obj_update_layout at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:307
+---  (inlined by) lv_obj_update_layout at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_pos.c:293
+--- 0x4202c7a7: lv_display_refr_timer at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_refr.c:381
+--- 0x4203a696: lv_timer_exec at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:326 (discriminator 2)
+---  (inlined by) lv_timer_handler at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:107 (discriminator 2)
+--- 0x4203a7f9: lv_timer_handler at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/misc/lv_timer.c:71
+--- 0x4202498c: lvgl_port_task at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lvgl_port/src/lvgl9/esp_lvgl_port.c:262
+[0m
+[0;33m--- 0x4037608c: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4207a8cb: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:335
+[0m
+[0;33m--- 0x400570e8: memset in ROM
+--- 0x400570f3: memset in ROM
+[0m
+[0;33m--- 0x4207a8c8: lv_obj_get_child at /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src/core/lv_obj_tree.c:332
+--- 0x4204b77c: l

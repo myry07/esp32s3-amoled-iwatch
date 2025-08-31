@@ -1,0 +1,30 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/bootloader.bin
+Bootloader binary size 0x57c0 bytes. 0x2840 bytes (31%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/page1.c.obj
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:131:13: warning: 'video_btn_cb' defined but not used [-Wunused-function]
+  131 | static void video_btn_cb(lv_event_t *e)
+      |             ^~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:105:13: warning: 'pic_btn_cb' defined but not used [-Wunused-function]
+  105 | static void pic_btn_cb(lv_event_t *e)
+      |             ^~~~~~~~~~
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/main_page.c.obj
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/main_page.c:14:13: warning: 'video_back_btn_cb' declared 'static' but never defined [-Wunused-function]
+   14 | static void video_back_btn_cb(lv_event_t *e);
+      |             ^~~~~~~~~~~~~~~~~
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+info: INFO: Symbol BSP_I2S_NUM defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/components/bsp_extra/Kconfig:2
+    /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp32_s3_touch_amoled_2_06/Kconfig:115
+[8/10] Linking CXX executable lvgl_demo_v9.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/lvgl_demo_v9.bin
+[10/10] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/partition_table/partition-table.bin /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/lvgl_demo_v9.bin
+lvgl_demo_v9.bin binary size 0xd6790 bytes. Smallest app partition is 0x800000 bytes. 0x729870 bytes (90%) free.

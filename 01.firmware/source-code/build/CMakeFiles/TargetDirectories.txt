@@ -863,9 +863,6 @@
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/espressif__esp_new_jpeg/CMakeFiles/install/local.dir
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/espressif__esp_new_jpeg/CMakeFiles/install/strip.dir
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/__idf_main.dir
-/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/spiffs_storage_bin.dir
-/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/storage-flash.dir
-/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/encrypted-storage-flash.dir
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main/CMakeFiles/list_install_components.dir

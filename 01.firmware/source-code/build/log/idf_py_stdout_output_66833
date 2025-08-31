@@ -1,0 +1,127 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/bootloader.bin
+Bootloader binary size 0x57c0 bytes. 0x2840 bytes (31%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffsgen.py 0x700000 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/spiffs /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/page1.c.obj
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:132:13: warning: 'video_btn_cb' defined but not used [-Wunused-function]
+  132 | static void video_btn_cb(lv_event_t *e)
+      |             ^~~~~~~~~~~~
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+info: INFO: Symbol BSP_I2S_NUM defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp32_s3_touch_amoled_2_06/Kconfig:115
+    /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/components/bsp_extra/Kconfig:2
+[8/11] Linking CXX executable lvgl_demo_v9.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/lvgl_demo_v9.bin
+[10/11] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/partition_table/partition-table.bin /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/lvgl_demo_v9.bin
+lvgl_demo_v9.bin binary size 0xd7030 bytes. Smallest app partition is 0x800000 bytes. 0x728fd0 bytes (90%) free.
+[10/11] cd /Users/wangjiaqi/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/wangjiaqi/esp/esp-idf -D "SERIAL_TOOL=/Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/wangjiaqi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build -P /Users/wangjiaqi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 lvgl_demo_v9.bin 0x8000 partition_table/partition-table.bin 0x810000 storage.bin
+esptool.py v4.8.1
+Serial port /dev/cu.usbmodem1101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 30:ed:a0:ae:06:cc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000e7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00810000 to 0x00f0ffff...
+SHA digest in image updated
+Compressed 22464 bytes to 14260...
+Writing at 0x00000000... (100 %)
+Wrote 22464 bytes (14260 compressed) at 0x00000000 in 0.4 seconds (effective 416.1 kbit/s)...
+Hash of data verified.
+Compressed 880688 bytes to 514682...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cc80... (6 %)
+Writing at 0x00027198... (9 %)
+Writing at 0x0002f833... (12 %)
+Writing at 0x0003b580... (15 %)
+Writing at 0x00046ea6... (18 %)
+Writing at 0x0004e522... (21 %)
+Writing at 0x00054089... (25 %)
+Writing at 0x00059ede... (28 %)
+Writing at 0x0005f32a... (31 %)
+Writing at 0x000692fc... (34 %)
+Writing at 0x0006e745... (37 %)
+Writing at 0x00073b59... (40 %)
+Writing at 0x0007932b... (43 %)
+Writing at 0x0007e5b6... (46 %)
+Writing at 0x00083701... (50 %)
+Writing at 0x00088a9f... (53 %)
+Writing at 0x0008f00a... (56 %)
+Writing at 0x00094004... (59 %)
+Writing at 0x000991c3... (62 %)
+Writing at 0x0009e387... (65 %)
+Writing at 0x000a3f99... (68 %)
+Writing at 0x000a9c4a... (71 %)
+Writing at 0x000af97d... (75 %)
+Writing at 0x000b5e00... (78 %)
+Writing at 0x000be3a9... (81 %)
+Writing at 0x000c6958... (84 %)
+Writing at 0x000cc47d... (87 %)
+Writing at 0x000d1b14... (90 %)
+Writing at 0x000d7190... (93 %)
+Writing at 0x000de4e3... (96 %)
+Writing at 0x000e4670... (100 %)
+Wrote 880688 bytes (514682 compressed) at 0x00010000 in 9.6 seconds (effective 737.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 120...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (120 compressed) at 0x00008000 in 0.1 seconds (effective 351.0 kbit/s)...
+Hash of data verified.
+Compressed 7340032 bytes to 547916...
+Writing at 0x00810000... (2 %)
+Writing at 0x0081469a... (5 %)
+Writing at 0x00818a99... (8 %)
+Writing at 0x0081ce8b... (11 %)
+Writing at 0x00821376... (14 %)
+Writing at 0x0082574f... (17 %)
+Writing at 0x00829b91... (20 %)
+Writing at 0x0082e23b... (23 %)
+Writing at 0x00832619... (26 %)
+Writing at 0x008369f6... (29 %)
+Writing at 0x0083add3... (32 %)
+Writing at 0x0083f564... (35 %)
+Writing at 0x0084393a... (38 %)
+Writing at 0x00847d1b... (41 %)
+Writing at 0x0084c1e5... (44 %)
+Writing at 0x00850639... (47 %)
+Writing at 0x00854be1... (50 %)
+Writing at 0x00858fc2... (52 %)
+Writing at 0x0085d49b... (55 %)
+Writing at 0x008618f1... (58 %)
+Writing at 0x00865efa... (61 %)
+Writing at 0x0086a3c4... (64 %)
+Writing at 0x0086e79a... (67 %)
+Writing at 0x00872b77... (70 %)
+Writing at 0x00876fb9... (73 %)
+Writing at 0x0087b64b... (76 %)
+Writing at 0x0087fa2a... (79 %)
+Writing at 0x00883e02... (82 %)
+Writing at 0x00888332... (85 %)
+Writing at 0x0088c6ff... (88 %)
+Writing at 0x00890c6c... (91 %)
+Writing at 0x008951a5... (94 %)
+Writing at 0x00899a77... (97 %)
+Writing at 0x00b3b505... (100 %)
+Wrote 7340032 bytes (547916 compressed) at 0x00810000 in 51.6 seconds (effective 1138.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

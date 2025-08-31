@@ -1,0 +1,405 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "waveshare/esp32_s3_touch_amoled_2_06": "1.0.3" -> "1.0.5"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 16 dependencies:
+NOTICE: [1/16] chmorgan/esp-audio-player (1.0.7)
+NOTICE: [2/16] chmorgan/esp-file-iterator (1.0.0)
+NOTICE: [3/16] chmorgan/esp-libhelix-mp3 (1.0.3)
+NOTICE: [4/16] espressif/avi_player (2.0.0)
+NOTICE: [5/16] espressif/cmake_utilities (0.5.3)
+NOTICE: [6/16] espressif/esp_codec_dev (1.3.6)
+NOTICE: [7/16] espressif/esp_io_expander (1.0.1)
+NOTICE: [8/16] espressif/esp_lcd_panel_io_additions (1.0.1)
+NOTICE: [9/16] espressif/esp_lcd_touch (1.1.2)
+NOTICE: [10/16] espressif/esp_lcd_touch_ft5x06 (1.0.7)
+NOTICE: [11/16] espressif/esp_lvgl_port (2.6.0)
+NOTICE: [12/16] espressif/esp_new_jpeg (0.6.1)
+NOTICE: [13/16] lvgl/lvgl (9.2.0)
+NOTICE: [14/16] waveshare/esp32_s3_touch_amoled_2_06 (1.0.3)
+NOTICE: [15/16] waveshare/esp_lcd_sh8601 (1.0.2)
+NOTICE: [16/16] idf (5.4.1)
+-- Project sdkconfig file /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig
+Loading defaults file /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig.defaults...
+warning: unknown kconfig symbol 'ESP_BROOKESIA_ENABLE_AI_FRAMEWORK' assigned to 'n' in /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig.defaults
+warning: unknown kconfig symbol 'ESP_BROOKESIA_GUI_ENABLE_ANIM_PLAYER' assigned to 'n' in /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig.defaults
+warning: unknown kconfig symbol 'ESP_BROOKESIA_ENABLE_SERVICES' assigned to 'n' in /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig.defaults
+warning: unknown kconfig symbol 'ESP_BROOKESIA_SYSTEMS_ENABLE_SPEAKER' assigned to 'n' in /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/sdkconfig.defaults
+-- Compiler supported targets: xtensa-esp-elf
+-- App "lvgl_demo_v9" version: 495ea42-dirty
+-- Adding linker script /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.wdt.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /Users/wangjiaqi/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- AVI_PLAYER: 2.0.0
+-- LVGL version: 9.2.0
+-- ESP_LCD_PANEL_IO_ADDITIONS: 1.0.1
+-- ESP_LCD_SH8601: 1.0.2
+-- Components: app_trace app_update bootloader bootloader_support bsp_extra bt chmorgan__esp-audio-player chmorgan__esp-file-iterator chmorgan__esp-libhelix-mp3 cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__avi_player espressif__cmake_utilities espressif__esp_codec_dev espressif__esp_io_expander espressif__esp_lcd_panel_io_additions espressif__esp_lcd_touch espressif__esp_lcd_touch_ft5x06 espressif__esp_lvgl_port espressif__esp_new_jpeg esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lvgl__lvgl lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs waveshare__esp32_s3_touch_amoled_2_06 waveshare__esp_lcd_sh8601 wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /Users/wangjiaqi/esp/esp-idf/components/app_trace /Users/wangjiaqi/esp/esp-idf/components/app_update /Users/wangjiaqi/esp/esp-idf/components/bootloader /Users/wangjiaqi/esp/esp-idf/components/bootloader_support /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/components/bsp_extra /Users/wangjiaqi/esp/esp-idf/components/bt /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-audio-player /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-file-iterator /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-libhelix-mp3 /Users/wangjiaqi/esp/esp-idf/components/cmock /Users/wangjiaqi/esp/esp-idf/components/console /Users/wangjiaqi/esp/esp-idf/components/cxx /Users/wangjiaqi/esp/esp-idf/components/driver /Users/wangjiaqi/esp/esp-idf/components/efuse /Users/wangjiaqi/esp/esp-idf/components/esp-tls /Users/wangjiaqi/esp/esp-idf/components/esp_adc /Users/wangjiaqi/esp/esp-idf/components/esp_app_format /Users/wangjiaqi/esp/esp-idf/components/esp_bootloader_format /Users/wangjiaqi/esp/esp-idf/components/esp_coex /Users/wangjiaqi/esp/esp-idf/components/esp_common /Users/wangjiaqi/esp/esp-idf/components/esp_driver_ana_cmpr /Users/wangjiaqi/esp/esp-idf/components/esp_driver_cam /Users/wangjiaqi/esp/esp-idf/components/esp_driver_dac /Users/wangjiaqi/esp/esp-idf/components/esp_driver_gpio /Users/wangjiaqi/esp/esp-idf/components/esp_driver_gptimer /Users/wangjiaqi/esp/esp-idf/components/esp_driver_i2c /Users/wangjiaqi/esp/esp-idf/components/esp_driver_i2s /Users/wangjiaqi/esp/esp-idf/components/esp_driver_isp /Users/wangjiaqi/esp/esp-idf/components/esp_driver_jpeg /Users/wangjiaqi/esp/esp-idf/components/esp_driver_ledc /Users/wangjiaqi/esp/esp-idf/components/esp_driver_mcpwm /Users/wangjiaqi/esp/esp-idf/components/esp_driver_parlio /Users/wangjiaqi/esp/esp-idf/components/esp_driver_pcnt /Users/wangjiaqi/esp/esp-idf/components/esp_driver_ppa /Users/wangjiaqi/esp/esp-idf/components/esp_driver_rmt /Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdio /Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdm /Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdmmc /Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdspi /Users/wangjiaqi/esp/esp-idf/components/esp_driver_spi /Users/wangjiaqi/esp/esp-idf/components/esp_driver_touch_sens /Users/wangjiaqi/esp/esp-idf/components/esp_driver_tsens /Users/wangjiaqi/esp/esp-idf/components/esp_driver_uart /Users/wangjiaqi/esp/esp-idf/components/esp_driver_usb_serial_jtag /Users/wangjiaqi/esp/esp-idf/components/esp_eth /Users/wangjiaqi/esp/esp-idf/components/esp_event /Users/wangjiaqi/esp/esp-idf/components/esp_gdbstub /Users/wangjiaqi/esp/esp-idf/components/esp_hid /Users/wangjiaqi/esp/esp-idf/components/esp_http_client /Users/wangjiaqi/esp/esp-idf/components/esp_http_server /Users/wangjiaqi/esp/esp-idf/components/esp_https_ota /Users/wangjiaqi/esp/esp-idf/components/esp_https_server /Users/wangjiaqi/esp/esp-idf/components/esp_hw_support /Users/wangjiaqi/esp/esp-idf/components/esp_lcd /Users/wangjiaqi/esp/esp-idf/components/esp_local_ctrl /Users/wangjiaqi/esp/esp-idf/components/esp_mm /Users/wangjiaqi/esp/esp-idf/components/esp_netif /Users/wangjiaqi/esp/esp-idf/components/esp_netif_stack /Users/wangjiaqi/esp/esp-idf/components/esp_partition /Users/wangjiaqi/esp/esp-idf/components/esp_phy /Users/wangjiaqi/esp/esp-idf/components/esp_pm /Users/wangjiaqi/esp/esp-idf/components/esp_psram /Users/wangjiaqi/esp/esp-idf/components/esp_ringbuf /Users/wangjiaqi/esp/esp-idf/components/esp_rom /Users/wangjiaqi/esp/esp-idf/components/esp_security /Users/wangjiaqi/esp/esp-idf/components/esp_system /Users/wangjiaqi/esp/esp-idf/components/esp_timer /Users/wangjiaqi/esp/esp-idf/components/esp_vfs_console /Users/wangjiaqi/esp/esp-idf/components/esp_wifi /Users/wangjiaqi/esp/esp-idf/components/espcoredump /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__avi_player /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__cmake_utilities /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_codec_dev /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_io_expander /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_panel_io_additions /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_touch /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_touch_ft5x06 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lvgl_port /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_new_jpeg /Users/wangjiaqi/esp/esp-idf/components/esptool_py /Users/wangjiaqi/esp/esp-idf/components/fatfs /Users/wangjiaqi/esp/esp-idf/components/freertos /Users/wangjiaqi/esp/esp-idf/components/hal /Users/wangjiaqi/esp/esp-idf/components/heap /Users/wangjiaqi/esp/esp-idf/components/http_parser /Users/wangjiaqi/esp/esp-idf/components/idf_test /Users/wangjiaqi/esp/esp-idf/components/ieee802154 /Users/wangjiaqi/esp/esp-idf/components/json /Users/wangjiaqi/esp/esp-idf/components/log /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl /Users/wangjiaqi/esp/esp-idf/components/lwip /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main /Users/wangjiaqi/esp/esp-idf/components/mbedtls /Users/wangjiaqi/esp/esp-idf/components/mqtt /Users/wangjiaqi/esp/esp-idf/components/newlib /Users/wangjiaqi/esp/esp-idf/components/nvs_flash /Users/wangjiaqi/esp/esp-idf/components/nvs_sec_provider /Users/wangjiaqi/esp/esp-idf/components/openthread /Users/wangjiaqi/esp/esp-idf/components/partition_table /Users/wangjiaqi/esp/esp-idf/components/perfmon /Users/wangjiaqi/esp/esp-idf/components/protobuf-c /Users/wangjiaqi/esp/esp-idf/components/protocomm /Users/wangjiaqi/esp/esp-idf/components/pthread /Users/wangjiaqi/esp/esp-idf/components/rt /Users/wangjiaqi/esp/esp-idf/components/sdmmc /Users/wangjiaqi/esp/esp-idf/components/soc /Users/wangjiaqi/esp/esp-idf/components/spi_flash /Users/wangjiaqi/esp/esp-idf/components/spiffs /Users/wangjiaqi/esp/esp-idf/components/tcp_transport /Users/wangjiaqi/esp/esp-idf/components/touch_element /Users/wangjiaqi/esp/esp-idf/components/ulp /Users/wangjiaqi/esp/esp-idf/components/unity /Users/wangjiaqi/esp/esp-idf/components/usb /Users/wangjiaqi/esp/esp-idf/components/vfs /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp32_s3_touch_amoled_2_06 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp_lcd_sh8601 /Users/wangjiaqi/esp/esp-idf/components/wear_levelling /Users/wangjiaqi/esp/esp-idf/components/wifi_provisioning /Users/wangjiaqi/esp/esp-idf/components/wpa_supplicant /Users/wangjiaqi/esp/esp-idf/components/xtensa
+-- Configuring done (14.0s)
+-- Generating done (0.7s)
+-- Build files have been written to: /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/esp-idf/esptool_py && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/bootloader/bootloader.bin
+Bootloader binary size 0x57c0 bytes. 0x2840 bytes (31%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] cd /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/esp-idf/main && /Users/wangjiaqi/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/wangjiaqi/esp/esp-idf/components/spiffs/spiffsgen.py 0x700000 /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/spiffs /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[5/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/game1.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/game1.c.obj 
+/Users/wangjiaqi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.4.1-dirty\" -DLV_ATTRIBUTE_FAST_MEM=IRAM_ATTR -DLV_CONF_INCLUDE_SIMPLE -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/build/config -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/demos -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include -I/Users/wangjiaqi/esp/esp-idf/components/newlib/platform_include -I/Users/wangjiaqi/esp/esp-idf/components/freertos/config/include -I/Users/wangjiaqi/esp/esp-idf/components/freertos/config/include/freertos -I/Users/wangjiaqi/esp/esp-idf/components/freertos/config/xtensa/include -I/Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/wangjiaqi/esp/esp-idf/components/freertos/esp_additions/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/include/soc -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/dma/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/ldo/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/Users/wangjiaqi/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/heap/include -I/Users/wangjiaqi/esp/esp-idf/components/heap/tlsf -I/Users/wangjiaqi/esp/esp-idf/components/log/include -I/Users/wangjiaqi/esp/esp-idf/components/soc/include -I/Users/wangjiaqi/esp/esp-idf/components/soc/esp32s3 -I/Users/wangjiaqi/esp/esp-idf/components/soc/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/soc/esp32s3/register -I/Users/wangjiaqi/esp/esp-idf/components/hal/platform_port/include -I/Users/wangjiaqi/esp/esp-idf/components/hal/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/hal/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_rom/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/Users/wangjiaqi/esp/esp-idf/components/esp_rom/esp32s3 -I/Users/wangjiaqi/esp/esp-idf/components/esp_common/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_system/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc -I/Users/wangjiaqi/esp/esp-idf/components/esp_system/port/include/private -I/Users/wangjiaqi/esp/esp-idf/components/xtensa/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/xtensa/include -I/Users/wangjiaqi/esp/esp-idf/components/xtensa/deprecated_include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/include/apps -I/Users/wangjiaqi/esp/esp-idf/components/lwip/include/apps/sntp -I/Users/wangjiaqi/esp/esp-idf/components/lwip/lwip/src/include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/port/include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/port/freertos/include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/port/esp32xx/include -I/Users/wangjiaqi/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/Users/wangjiaqi/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/src -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/lvgl__lvgl/examples -I/Users/wangjiaqi/esp/esp-idf/components/esp_timer/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__avi_player/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_new_jpeg/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_gpio/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_pm/include -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/port/include -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/mbedtls/include -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/mbedtls/library -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/Users/wangjiaqi/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/Users/wangjiaqi/esp/esp-idf/components/esp_app_format/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_bootloader_format/include -I/Users/wangjiaqi/esp/esp-idf/components/app_update/include -I/Users/wangjiaqi/esp/esp-idf/components/bootloader_support/include -I/Users/wangjiaqi/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_partition/include -I/Users/wangjiaqi/esp/esp-idf/components/efuse/include -I/Users/wangjiaqi/esp/esp-idf/components/efuse/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_mm/include -I/Users/wangjiaqi/esp/esp-idf/components/spi_flash/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_security/include -I/Users/wangjiaqi/esp/esp-idf/components/pthread/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_gptimer/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_ringbuf/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_uart/include -I/Users/wangjiaqi/esp/esp-idf/components/vfs/include -I/Users/wangjiaqi/esp/esp-idf/components/app_trace/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_event/include -I/Users/wangjiaqi/esp/esp-idf/components/nvs_flash/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_pcnt/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_spi/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_mcpwm/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_i2s/include -I/Users/wangjiaqi/esp/esp-idf/components/sdmmc/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdmmc/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdspi/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdio/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_dac/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_rmt/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_tsens/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_sdm/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_i2c/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_ledc/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_parlio/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_usb_serial_jtag/include -I/Users/wangjiaqi/esp/esp-idf/components/driver/deprecated -I/Users/wangjiaqi/esp/esp-idf/components/driver/i2c/include -I/Users/wangjiaqi/esp/esp-idf/components/driver/touch_sensor/include -I/Users/wangjiaqi/esp/esp-idf/components/driver/twai/include -I/Users/wangjiaqi/esp/esp-idf/components/driver/touch_sensor/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_phy/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_phy/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_vfs_console/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_netif/include -I/Users/wangjiaqi/esp/esp-idf/components/wpa_supplicant/include -I/Users/wangjiaqi/esp/esp-idf/components/wpa_supplicant/port/include -I/Users/wangjiaqi/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_coex/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_wifi/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_wifi/include/local -I/Users/wangjiaqi/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/Users/wangjiaqi/esp/esp-idf/components/unity/include -I/Users/wangjiaqi/esp/esp-idf/components/unity/unity/src -I/Users/wangjiaqi/esp/esp-idf/components/cmock/CMock/src -I/Users/wangjiaqi/esp/esp-idf/components/console -I/Users/wangjiaqi/esp/esp-idf/components/http_parser -I/Users/wangjiaqi/esp/esp-idf/components/esp-tls -I/Users/wangjiaqi/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/Users/wangjiaqi/esp/esp-idf/components/esp_adc/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_adc/interface -I/Users/wangjiaqi/esp/esp-idf/components/esp_adc/esp32s3/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_adc/deprecated/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_isp/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_cam/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_cam/interface -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_jpeg/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_driver_ppa/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_eth/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_gdbstub/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_hid/include -I/Users/wangjiaqi/esp/esp-idf/components/tcp_transport/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_http_client/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_http_server/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_https_ota/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_https_server/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_psram/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_lcd/include -I/Users/wangjiaqi/esp/esp-idf/components/esp_lcd/interface -I/Users/wangjiaqi/esp/esp-idf/components/esp_lcd/rgb/include -I/Users/wangjiaqi/esp/esp-idf/components/protobuf-c/protobuf-c -I/Users/wangjiaqi/esp/esp-idf/components/protocomm/include/common -I/Users/wangjiaqi/esp/esp-idf/components/protocomm/include/security -I/Users/wangjiaqi/esp/esp-idf/components/protocomm/include/transports -I/Users/wangjiaqi/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/Users/wangjiaqi/esp/esp-idf/components/protocomm/proto-c -I/Users/wangjiaqi/esp/esp-idf/components/esp_local_ctrl/include -I/Users/wangjiaqi/esp/esp-idf/components/espcoredump/include -I/Users/wangjiaqi/esp/esp-idf/components/espcoredump/include/port/xtensa -I/Users/wangjiaqi/esp/esp-idf/components/wear_levelling/include -I/Users/wangjiaqi/esp/esp-idf/components/fatfs/diskio -I/Users/wangjiaqi/esp/esp-idf/components/fatfs/src -I/Users/wangjiaqi/esp/esp-idf/components/fatfs/vfs -I/Users/wangjiaqi/esp/esp-idf/components/idf_test/include -I/Users/wangjiaqi/esp/esp-idf/components/idf_test/include/esp32s3 -I/Users/wangjiaqi/esp/esp-idf/components/ieee802154/include -I/Users/wangjiaqi/esp/esp-idf/components/json/cJSON -I/Users/wangjiaqi/esp/esp-idf/components/mqtt/esp-mqtt/include -I/Users/wangjiaqi/esp/esp-idf/components/nvs_sec_provider/include -I/Users/wangjiaqi/esp/esp-idf/components/perfmon/include -I/Users/wangjiaqi/esp/esp-idf/components/rt/include -I/Users/wangjiaqi/esp/esp-idf/components/spiffs/include -I/Users/wangjiaqi/esp/esp-idf/components/touch_element/include -I/Users/wangjiaqi/esp/esp-idf/components/usb/include -I/Users/wangjiaqi/esp/esp-idf/components/wifi_provisioning/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-libhelix-mp3/libhelix-mp3/pub -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-audio-player/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/chmorgan__esp-file-iterator/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_codec_dev/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_codec_dev/interface -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_codec_dev/device/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lvgl_port/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_io_expander/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_panel_io_additions/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_touch/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/espressif__esp_lcd_touch_ft5x06/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp_lcd_sh8601/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp32_s3_touch_amoled_2_06/include -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/managed_components/waveshare__esp32_s3_touch_amoled_2_06/include/bsp -I/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/components/bsp_extra/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -Wno-format -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -mdisable-hardware-atomics -O2 -fmacro-prefix-map=/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code=. -fmacro-prefix-map=/Users/wangjiaqi/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -DAVI_PLAYER_VER_MAJOR=2 -DAVI_PLAYER_VER_MINOR=0 -DAVI_PLAYER_VER_PATCH=0 -DESP_LCD_PANEL_IO_ADDITIONS_VER_MAJOR=1 -DESP_LCD_PANEL_IO_ADDITIONS_VER_MINOR=0 -DESP_LCD_PANEL_IO_ADDITIONS_VER_PATCH=1 -DESP_LCD_SH8601_VER_MAJOR=1 -DESP_LCD_SH8601_VER_MINOR=0 -DESP_LCD_SH8601_VER_PATCH=2 -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/game1.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/game1.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/game1.c.obj -c /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c
+In file included from /Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:9:
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:23:6: error: #elif with no expression
+   23 | #elif
+      |      ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:32:5: error: unknown type name 'lv_obj_t'
+   32 |     lv_obj_t obj;
+      |     ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:33:5: error: unknown type name 'lv_obj_t'
+   33 |     lv_obj_t * btnm;
+      |     ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:34:5: error: unknown type name 'uint16_t'
+   34 |     uint16_t score;
+      |     ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:1:1: note: 'uint16_t' is defined in header '<stdint.h>'; this is probably fixable by adding '#include <stdint.h>'
+  +++ |+#include <stdint.h>
+    1 | /**
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:35:5: error: unknown type name 'uint16_t'
+   35 |     uint16_t map_count;
+      |     ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:35:5: note: 'uint16_t' is defined in header '<stdint.h>'; this is probably fixable by adding '#include <stdint.h>'
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:36:5: error: unknown type name 'uint16_t'
+   36 |     uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE];
+      |     ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:36:5: note: 'uint16_t' is defined in header '<stdint.h>'; this is probably fixable by adding '#include <stdint.h>'
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:36:21: error: 'MATRIX_SIZE' undeclared here (not in a function)
+   36 |     uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE];
+      |                     ^~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:38:5: error: unknown type name 'bool'
+   38 |     bool     game_over;
+      |     ^~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:1:1: note: 'bool' is defined in header '<stdbool.h>'; this is probably fixable by adding '#include <stdbool.h>'
+  +++ |+#include <stdbool.h>
+    1 | /**
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:48:1: error: unknown type name 'lv_obj_t'
+   48 | lv_obj_t * lv_100ask_2048_create(lv_obj_t * parent);
+      | ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:48:34: error: unknown type name 'lv_obj_t'
+   48 | lv_obj_t * lv_100ask_2048_create(lv_obj_t * parent);
+      |                                  ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:53:34: error: unknown type name 'lv_obj_t'
+   53 | void lv_100ask_2048_set_new_game(lv_obj_t * obj);
+      |                                  ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:58:1: error: unknown type name 'uint16_t'
+   58 | uint16_t lv_100ask_2048_get_best_tile(lv_obj_t * obj);
+      | ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:58:1: note: 'uint16_t' is defined in header '<stdint.h>'; this is probably fixable by adding '#include <stdint.h>'
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:58:39: error: unknown type name 'lv_obj_t'
+   58 | uint16_t lv_100ask_2048_get_best_tile(lv_obj_t * obj);
+      |                                       ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:60:1: error: unknown type name 'uint16_t'
+   60 | uint16_t lv_100ask_2048_get_score(lv_obj_t * obj);
+      | ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:60:1: note: 'uint16_t' is defined in header '<stdint.h>'; this is probably fixable by adding '#include <stdint.h>'
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:60:35: error: unknown type name 'lv_obj_t'
+   60 | uint16_t lv_100ask_2048_get_score(lv_obj_t * obj);
+      |                                   ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:62:1: error: unknown type name 'bool'
+   62 | bool lv_100ask_2048_get_status(lv_obj_t * obj);
+      | ^~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:62:1: note: 'bool' is defined in header '<stdbool.h>'; this is probably fixable by adding '#include <stdbool.h>'
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:62:32: error: unknown type name 'lv_obj_t'
+   62 | bool lv_100ask_2048_get_status(lv_obj_t * obj);
+      |                                ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/include/game1.h:78:2: error: #endif without #if
+   78 | #endif /*LV_100ASK_2048_H*/
+      |  ^~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:47:46: error: unknown type name 'lv_obj_class_t'
+   47 | static void lv_100ask_2048_constructor(const lv_obj_class_t * class_p, lv_obj_t * obj);
+      |                                              ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:47:72: error: unknown type name 'lv_obj_t'
+   47 | static void lv_100ask_2048_constructor(const lv_obj_class_t * class_p, lv_obj_t * obj);
+      |                                                                        ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:48:45: error: unknown type name 'lv_obj_class_t'
+   48 | static void lv_100ask_2048_destructor(const lv_obj_class_t * class_p, lv_obj_t * obj);
+      |                                             ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:48:71: error: unknown type name 'lv_obj_t'
+   48 | static void lv_100ask_2048_destructor(const lv_obj_class_t * class_p, lv_obj_t * obj);
+      |                                                                       ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:49:40: error: unknown type name 'lv_obj_class_t'
+   49 | static void lv_100ask_2048_event(const lv_obj_class_t * class_p, lv_event_t * e);
+      |                                        ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:49:66: error: unknown type name 'lv_event_t'
+   49 | static void lv_100ask_2048_event(const lv_obj_class_t * class_p, lv_event_t * e);
+      |                                                                  ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:50:27: error: unknown type name 'lv_event_t'
+   50 | static void btnm_event_cb(lv_event_t * e);
+      |                           ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:55:8: error: unknown type name 'lv_color_t'
+   55 | static lv_color_t get_num_color(uint16_t num);
+      |        ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:72:7: error: unknown type name 'lv_obj_class_t'
+   72 | const lv_obj_class_t lv_100ask_2048_class = {
+      |       ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:73:5: error: field name not in record or union initializer
+   73 |     .constructor_cb = lv_100ask_2048_constructor,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:73:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:73:23: error: 'lv_100ask_2048_constructor' undeclared here (not in a function); did you mean 'lv_100ask_2048_class'?
+   73 |     .constructor_cb = lv_100ask_2048_constructor,
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       lv_100ask_2048_class
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:74:5: error: field name not in record or union initializer
+   74 |     .destructor_cb  = lv_100ask_2048_destructor,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:74:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:74:23: error: 'lv_100ask_2048_destructor' undeclared here (not in a function); did you mean 'lv_100ask_2048_t'?
+   74 |     .destructor_cb  = lv_100ask_2048_destructor,
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       lv_100ask_2048_t
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:74:23: warning: excess elements in scalar initializer
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:74:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:76:5: error: field name not in record or union initializer
+   76 |     .width_def      = LV_DPI_DEF * 2,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:76:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:76:23: error: 'LV_DPI_DEF' undeclared here (not in a function)
+   76 |     .width_def      = LV_DPI_DEF * 2,
+      |                       ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:76:23: warning: excess elements in scalar initializer
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:76:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:77:5: error: field name not in record or union initializer
+   77 |     .height_def     = LV_DPI_DEF * 2,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:77:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:77:23: warning: excess elements in scalar initializer
+   77 |     .height_def     = LV_DPI_DEF * 2,
+      |                       ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:77:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:78:5: error: field name not in record or union initializer
+   78 |     .group_def = LV_OBJ_CLASS_GROUP_DEF_TRUE,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:78:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:78:18: error: 'LV_OBJ_CLASS_GROUP_DEF_TRUE' undeclared here (not in a function)
+   78 |     .group_def = LV_OBJ_CLASS_GROUP_DEF_TRUE,
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:78:18: warning: excess elements in scalar initializer
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:78:18: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:79:5: error: field name not in record or union initializer
+   79 |     .instance_size  = sizeof(lv_100ask_2048_t),
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:79:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:79:23: warning: excess elements in scalar initializer
+   79 |     .instance_size  = sizeof(lv_100ask_2048_t),
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:79:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:80:5: error: field name not in record or union initializer
+   80 |     .base_class     = &lv_obj_class,
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:80:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:80:24: error: 'lv_obj_class' undeclared here (not in a function)
+   80 |     .base_class     = &lv_obj_class,
+      |                        ^~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:80:23: warning: excess elements in scalar initializer
+   80 |     .base_class     = &lv_obj_class,
+      |                       ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:80:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:81:5: error: field name not in record or union initializer
+   81 |     .name           = "game 2048"
+      |     ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:81:5: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:81:23: warning: excess elements in scalar initializer
+   81 |     .name           = "game 2048"
+      |                       ^~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:81:23: note: (near initialization for 'lv_100ask_2048_class')
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:92:1: error: unknown type name 'lv_obj_t'
+   92 | lv_obj_t * lv_100ask_2048_create(lv_obj_t * parent)
+      | ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:92:34: error: unknown type name 'lv_obj_t'
+   92 | lv_obj_t * lv_100ask_2048_create(lv_obj_t * parent)
+      |                                  ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:104:34: error: unknown type name 'lv_obj_t'
+  104 | void lv_100ask_2048_set_new_game(lv_obj_t * obj)
+      |                                  ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:125:35: error: unknown type name 'lv_obj_t'
+  125 | uint16_t lv_100ask_2048_get_score(lv_obj_t * obj)
+      |                                   ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:134:32: error: unknown type name 'lv_obj_t'
+  134 | bool lv_100ask_2048_get_status(lv_obj_t * obj)
+      |                                ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:144:39: error: unknown type name 'lv_obj_t'
+  144 | uint16_t lv_100ask_2048_get_best_tile(lv_obj_t * obj)
+      |                                       ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:168:29: error: unknown type name 'lv_event_t'
+  168 | static void game_play_event(lv_event_t * e)
+      |                             ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:250:46: error: unknown type name 'lv_obj_class_t'
+  250 | static void lv_100ask_2048_constructor(const lv_obj_class_t * class_p, lv_obj_t * obj)
+      |                                              ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:250:72: error: unknown type name 'lv_obj_t'
+  250 | static void lv_100ask_2048_constructor(const lv_obj_class_t * class_p, lv_obj_t * obj)
+      |                                                                        ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:310:45: error: unknown type name 'lv_obj_class_t'
+  310 | static void lv_100ask_2048_destructor(const lv_obj_class_t * class_p, lv_obj_t * obj)
+      |                                             ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:310:71: error: unknown type name 'lv_obj_t'
+  310 | static void lv_100ask_2048_destructor(const lv_obj_class_t * class_p, lv_obj_t * obj)
+      |                                                                       ^~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:324:40: error: unknown type name 'lv_obj_class_t'
+  324 | static void lv_100ask_2048_event(const lv_obj_class_t * class_p, lv_event_t * e)
+      |                                        ^~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:324:66: error: unknown type name 'lv_event_t'
+  324 | static void lv_100ask_2048_event(const lv_obj_class_t * class_p, lv_event_t * e)
+      |                                                                  ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:338:27: error: unknown type name 'lv_event_t'
+  338 | static void btnm_event_cb(lv_event_t * e)
+      |                           ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'init_matrix_num':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:402:19: error: type of formal parameter 1 is incomplete
+  402 |         addRandom(matrix);
+      |                   ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:403:19: error: type of formal parameter 1 is incomplete
+  403 |         addRandom(matrix);
+      |                   ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'addRandom':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:412:21: warning: unused variable 'list' [-Wunused-variable]
+  412 |         uint16_t n, list[MATRIX_SIZE * MATRIX_SIZE][2];
+      |                     ^~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:411:18: warning: variable 'r' set but not used [-Wunused-but-set-variable]
+  411 |         uint16_t r, len = 0;
+      |                  ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'int_to_str':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:466:16: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  466 |         if(num < 0)//如果num为负数，将num变正
+      |                ^
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'slide_array':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:531:41: error: type of formal parameter 1 is incomplete
+  531 |                         t = find_target(array,x,stop);
+      |                                         ^~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'move_up':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:574:47: error: type of formal parameter 2 is incomplete
+  574 |                 success |= slide_array(score, matrix[x]);
+      |                                               ^~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'move_left':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:583:23: error: type of formal parameter 1 is incomplete
+  583 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:585:30: error: type of formal parameter 2 is incomplete
+  585 |     success = move_up(score, matrix);
+      |                              ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:586:23: error: type of formal parameter 1 is incomplete
+  586 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:587:23: error: type of formal parameter 1 is incomplete
+  587 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:588:23: error: type of formal parameter 1 is incomplete
+  588 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'move_down':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:597:23: error: type of formal parameter 1 is incomplete
+  597 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:598:23: error: type of formal parameter 1 is incomplete
+  598 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:600:30: error: type of formal parameter 2 is incomplete
+  600 |     success = move_up(score, matrix);
+      |                              ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:601:23: error: type of formal parameter 1 is incomplete
+  601 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:602:23: error: type of formal parameter 1 is incomplete
+  602 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'move_right':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:611:23: error: type of formal parameter 1 is incomplete
+  611 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:612:23: error: type of formal parameter 1 is incomplete
+  612 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:613:23: error: type of formal parameter 1 is incomplete
+  613 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:615:30: error: type of formal parameter 2 is incomplete
+  615 |     success = move_up(score, matrix);
+      |                              ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:616:23: error: type of formal parameter 1 is incomplete
+  616 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: At top level:
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:648:8: error: unknown type name 'lv_color_t'
+  648 | static lv_color_t get_num_color(uint16_t num)
+      |        ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'get_num_color':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:650:5: error: unknown type name 'lv_color_t'
+  650 |     lv_color_t color;
+      |     ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:26:45: error: implicit declaration of function 'lv_color_hex' [-Wimplicit-function-declaration]
+   26 | #define LV_100ASK_2048_NUMBER_EMPTY_COLOR   lv_color_hex(0xc7b9ac)
+      |                                             ^~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:654:33: note: in expansion of macro 'LV_100ASK_2048_NUMBER_EMPTY_COLOR'
+  654 |         case 0:         color = LV_100ASK_2048_NUMBER_EMPTY_COLOR;  break;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: In function 'game_over':
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:676:21: error: type of formal parameter 1 is incomplete
+  676 |     if (count_empty(matrix) > 0) return false;
+      |                     ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:677:28: error: type of formal parameter 1 is incomplete
+  677 |         if (find_pair_down(matrix)) return false;
+      |                            ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:679:23: error: type of formal parameter 1 is incomplete
+  679 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:680:28: error: type of formal parameter 1 is incomplete
+  680 |         if (find_pair_down(matrix)) ended = false;
+      |                            ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:682:19: error: type of formal parameter 1 is incomplete
+  682 |     rotate_matrix(matrix);
+      |                   ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:683:23: error: type of formal parameter 1 is incomplete
+  683 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:684:23: error: type of formal parameter 1 is incomplete
+  684 |         rotate_matrix(matrix);
+      |                       ^~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c: At top level:
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:690:2: error: #endif without #if
+  690 | #endif  /*LV_USE_100ASK_2048*/
+      |  ^~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:672:13: warning: 'game_over' defined but not used [-Wunused-function]
+  672 | static bool game_over(uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:648:19: warning: 'get_num_color' defined but not used [-Wunused-function]
+  648 | static lv_color_t get_num_color(uint16_t num)
+      |                   ^~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:607:13: warning: 'move_right' defined but not used [-Wunused-function]
+  607 | static bool move_right(uint16_t * score, uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:593:13: warning: 'move_down' defined but not used [-Wunused-function]
+  593 | static bool move_down(uint16_t * score, uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:579:13: warning: 'move_left' defined but not used [-Wunused-function]
+  579 | static bool move_left(uint16_t * score, uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:439:13: warning: 'update_btnm_map' defined but not used [-Wunused-function]
+  439 | static void update_btnm_map(char * btnm_map[], uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~~~~~~~
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/game1.c:391:13: warning: 'init_matrix_num' defined but not used [-Wunused-function]
+  391 | static void init_matrix_num(uint16_t matrix[MATRIX_SIZE][MATRIX_SIZE])
+      |             ^~~~~~~~~~~~~~~
+[6/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port/page1.c.obj
+/Users/wangjiaqi/Documents/Github/esp32s3-amoled-iwatch/01.firmware/source-code/main/lvgl_port/page1.c:131:13: warning: 'video_btn_cb' defined but not used [-Wunused-function]
+  131 | static void video_btn_cb(lv_event_t *e)
+      |             ^~~~~~~~~~~~
+ninja: build stopped: subcommand failed.

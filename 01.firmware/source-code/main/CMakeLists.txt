@@ -8,6 +8,9 @@ idf_component_register(
     lvgl_port/video_audio.c
     lvgl_port/main_page.c
     lvgl_port/photo_album.c
+    lvgl_port/page1.c
+    lvgl_port/game1.c
+    lvgl_port/setting.c
 
 
 

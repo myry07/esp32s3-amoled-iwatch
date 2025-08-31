@@ -1,0 +1,884 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009d0f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec0
+load:0x403cb700,len:0x318c
+entry 0x403c8958
+[0;32mI (26) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 30 2025 21:21:36[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (28) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (28) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (29) boot: Partition Table:[0m
+[0;32mI (29) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (30) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (30) boot:  3 storage          Unknown data     01 82 00810000 00700000[0m
+[0;32mI (31) boot: End of partition table[0m
+[0;32mI (31) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=3e334h (254772) map[0m
+[0;32mI (69) esp_image: segment 1: paddr=0004e35c vaddr=3fcab600 size=01cbch (  7356) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=7c460h (509024) map[0m
+[0;32mI (147) esp_image: segment 3: paddr=000cc488 vaddr=3fcad2bc size=01700h (  5888) load[0m
+[0;32mI (149) esp_image: segment 4: paddr=000cdb90 vaddr=40374000 size=275a8h (161192) load[0m
+[0;32mI (179) esp_image: segment 5: paddr=000f5140 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (195) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (195) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (196) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (196) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (196) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (196) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (197) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (197) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (197) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (197) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (198) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (199) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (199) esp_psram: Speed: 80MHz[0m
+[0;32mI (218) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (258) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (259) cpu_start: Multicore app[0m
+[0;32mI (633) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (642) cpu_start: Pro cpu start user code[0m
+[0;32mI (642) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (642) app_init: Application information:[0m
+[0;32mI (642) app_init: Project name:     lvgl_demo_v9[0m
+[0;32mI (642) app_init: App version:      495ea42-dirty[0m
+[0;32mI (642) app_init: Compile time:     Aug 31 2025 08:48:56[0m
+[0;32mI (642) app_init: ELF file SHA256:  832efdfde...[0m
+[0;32mI (643) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (643) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (643) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (643) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (644) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (644) heap_init: At 3FCAF8D8 len 00039E38 (231 KiB): RAM[0m
+[0;32mI (644) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (645) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (645) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (645) esp_psram: Adding pool of 7424K of PSRAM memory to heap allocator[0m
+[0;32mI (646) spi_flash: detected chip: gd[0m
+[0;32mI (646) spi_flash: flash io: qio[0m
+[0;33mW (646) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (647) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (647) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (649) esp_psram: Reserving pool of 4K of internal memory for DMA/internal allocations[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (829) ESP32-S3-Touch-AMOLED-2.06: Partition size: total: 6739601, used: 538144[0m
+[0;32mI (829) main: spiffs mounted[0m
+[0;32mI (829) spiffs: FILE: /spiffs/4k1.jpg (size=107401)[0m
+[0;32mI (834) spiffs: FILE: /spiffs/4k2.jpg (size=61666)[0m
+[0;32mI (836) spiffs: FILE: /spiffs/cute1.jpg (size=73244)[0m
+[0;32mI (840) spiffs: FILE: /spiffs/cute2.jpg (size=71632)[0m
+[0;32mI (843) spiffs: FILE: /spiffs/nr/mt1.jpg (size=74244)[0m
+[0;32mI (846) spiffs: FILE: /spiffs/nr/mt2.jpg (size=74797)[0m
+[0;32mI (849) spiffs: FILE: /spiffs/nr/zyq.jpg (size=43460)[0m
+[0;32mI (851) spiffs: FILE: /spiffs/btns/game1.jpg (size=3088)[0m
+[0;32mI (852) spiffs: FILE: /spiffs/btns/music.jpg (size=4476)[0m
+[0;32mI (852) spiffs: FILE: /spiffs/btns/photo.jpg (size=5261)[0m
+[0;32mI (852) spiffs: FILE: /spiffs/btns/video.jpg (size=4845)[0m
+[0;32mI (853) spiffs: FILE: /spiffs/btns/setting.jpg (size=6485)[0m
+[0;32mI (965) LVGL: Starting LVGL task[0m
+[0;32mI (965) ESP32-S3-Touch-AMOLED-2.06: Initialize SPI bus[0m
+[0;32mI (966) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (966) sh8601: LCD panel create success, version: 1.0.2[0m
+[0;33mW (1290) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1291) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1291) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1327) ESP32-S3-Touch-AMOLED-2.06: Backlight on[0m
+[0;32mI (1801) main_task: Returned from app_main()[0m
+[0;32mI (6748) gesture: 上滑[0m
+[0;32mI (8001) gesture: 左滑[0m
+[0;32mI (17438) gesture: 右滑[0m
+[0;32mI (18946) gesture: 左滑[0m
+[0;32mI (20203) gesture: 右滑[0m
+[0;32mI (21899) gesture: 左滑[0m
+[0;32mI (23437) gesture: 右滑[0m
+[0;32mI (24597) main_page: Picture 被点击[0m
+[0;32mI (26231) gesture: 右滑[0m
+[0;32mI (27160) gesture: 左滑[0m
+[0;32mI (27976) btn: 点击事件[0m
+[0;32mI (30869) btn: 点击事件[0m
+[0;32mI (31872) btn: 点击事件[0m
+[0;32mI (32441) btn: 点击事件[0m
+[0;32mI (33066) btn: 点击事件[0m
+[0;32mI (35206) gesture: 上滑[0m
+[0;32mI (37338) btn: 点击事件[0m
+[0;32mI (37987) btn: 点击事件[0m
+[0;32mI (38962) btn: 点击事件[0m
+[0;32mI (39739) main_page: Video 被点击[0m
+[0;32mI (39749) ES8311: Work in Slave mode[0m
+[0;32mI (39752) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (39762) ES7210: Work in Slave mode[0m
+[0;32mI (39769) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (39780) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (39788) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (39789) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (39815) Adev_Codec: Open codec device OK[0m
+[0;32mI (39815) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (39816) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (39822) ES7210: Bits 16[0m
+[0;32mI (39835) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (39841) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (39850) ES7210: Unmuted[0m
+[0;32mI (39850) Adev_Codec: Open codec device OK[0m
+[0;32mI (39850) bsp_extra_board: Setting volume: 80[0m
+[0;33mW (39948) ESP32-S3-Touch-AMOLED-2.06: Warning: Long filenames on SD card are disabled in menuconfig![0m
+[0;32mI (39948) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (39950) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (39950) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (40000) video_audio: Found 12 AVI files in /sdcard/am_nr[0m
+[0;32mI (40000) video_audio: AVI[1/12]: /sdcard/am_nr/TEST1.AVI[0m
+[0;32mI (40000) video_audio: AVI[2/12]: /sdcard/am_nr/QJ1.AVI[0m
+[0;32mI (40000) video_audio: AVI[3/12]: /sdcard/am_nr/GC1.AVI[0m
+[0;32mI (40001) video_audio: AVI[4/12]: /sdcard/am_nr/_TEST~6.AVI[0m
+[0;32mI (40001) video_audio: AVI[5/12]: /sdcard/am_nr/TEST2.AVI[0m
+[0;32mI (40001) video_audio: AVI[6/12]: /sdcard/am_nr/_TEST~6.AVI[0m
+[0;32mI (40001) video_audio: AVI[7/12]: /sdcard/am_nr/TEST3.AVI[0m
+[0;32mI (40002) video_audio: AVI[8/12]: /sdcard/am_nr/_TEST~7.AVI[0m
+[0;32mI (40002) video_audio: AVI[9/12]: /sdcard/am_nr/TEST4.AVI[0m
+[0;32mI (40002) video_audio: AVI[10/12]: /sdcard/am_nr/_TEST~8.AVI[0m
+[0;32mI (40003) video_audio: AVI[11/12]: /sdcard/am_nr/TEST5.AVI[0m
+[0;32mI (40003) video_audio: AVI[12/12]: /sdcard/am_nr/_TEST~9.AVI[0m
+[0;32mI (40004) video_audio: SD mounted, found 12 AVI files[0m
+[0;32mI (40019) avi player: AVI Player Version: 2.0.0[0m
+[1;31mE (40019) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (40306) avifile: Find a video stream[0m
+[0;32mI (40306) avifile: movi pos:5678, size:3242458[0m
+[0;33mW (40306) video_audio: Using default sample rate: 16000[0m
+[0;33mW (40306) video_audio: Using default bit width: 16[0m
+[0;32mI (40306) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=0[0m
+[0;32mI (40312) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (40317) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (40317) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (40317) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (40334) Adev_Codec: Open codec device OK[0m
+[1;31mE (40335) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (40335) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (40335) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (40336) ES7210: Bits 16[0m
+[0;32mI (40343) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (40346) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (40353) ES7210: Unmuted[0m
+[0;32mI (40354) Adev_Codec: Open codec device OK[0m
+[0;32mI (40448) video_cb: Frame 1 (320x200)[0m
+[0;32mI (41952) video_cb: Frame 31 (320x200)[0m
+[1;31mE (42299) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (42318) video_audio: AVI playback finished[0m
+[1;31mE (42339) avi player: parse failed (-1)[0m
+[1;31mE (42339) avi player: AVI Perse failed[0m
+[0;32mI (42339) video_audio: AVI playback finished[0m
+[1;31mE (42350) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (42639) avifile: Find a video stream[0m
+[0;32mI (42639) avifile: movi pos:5678, size:9891124[0m
+[0;33mW (42639) video_audio: Using default sample rate: 16000[0m
+[0;33mW (42640) video_audio: Using default bit width: 16[0m
+[0;32mI (42640) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=0[0m
+[0;32mI (42645) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (42650) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (42650) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (42651) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (42666) Adev_Codec: Open codec device OK[0m
+[1;31mE (42666) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (42666) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (42666) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (42667) ES7210: Bits 16[0m
+[0;32mI (42674) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (42677) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (42685) ES7210: Unmuted[0m
+[0;32mI (42685) Adev_Codec: Open codec device OK[0m
+[0;32mI (43623) video_cb: Frame 61 (320x200)[0m
+[1;31mE (43828) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (43836) video_audio: AVI playback finished[0m
+[1;31mE (43869) avi player: parse failed (-1)[0m
+[1;31mE (43869) avi player: AVI Perse failed[0m
+[0;32mI (43869) video_audio: AVI playback finished[0m
+[1;31mE (43880) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (44169) avifile: Find a video stream[0m
+[0;32mI (44170) avifile: movi pos:5678, size:5748248[0m
+[0;33mW (44170) video_audio: Using default sample rate: 16000[0m
+[0;33mW (44170) video_audio: Using default bit width: 16[0m
+[0;32mI (44170) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=0[0m
+[0;32mI (44176) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (44180) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (44181) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (44181) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (44196) Adev_Codec: Open codec device OK[0m
+[1;31mE (44196) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (44196) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1[0m
+[0;32mI (44196) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1[0m
+[0;32mI (44198) ES7210: Bits 16[0m
+[0;32mI (44205) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (44208) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (44215) ES7210: Unmuted[0m
+[0;32mI (44215) Adev_Codec: Open codec device OK[0m
+[0;32mI (45364) video_cb: Frame 91 (320x200)[0m
+[0;32mI (46143) video_audio: AVI playback finished[0m
+[0;32mI (46434) avifile: Find a video stream[0m
+[0;32mI (46434) avifile: Find a audio stream[0m
+[0;32mI (46434) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (46434) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (46439) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (46444) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (46445) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (46445) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (46460) Adev_Codec: Open codec device OK[0m
+[1;31mE (46460) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (46460) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (46461) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (46462) ES7210: Bits 16[0m
+[0;32mI (46469) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (46472) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (46479) ES7210: Unmuted[0m
+[0;32mI (46479) Adev_Codec: Open codec device OK[0m
+[0;32mI (46867) video_cb: Frame 121 (320x200)[0m
+[0;32mI (48081) video_cb: Frame 151 (320x200)[0m
+[0;32mI (49360) video_cb: Frame 181 (320x200)[0m
+[0;32mI (50676) video_cb: Frame 211 (320x200)[0m
+[0;32mI (52015) video_cb: Frame 241 (320x200)[0m
+[1;31mE (53136) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (53158) video_audio: AVI playback finished[0m
+[0;32mI (53454) avifile: Find a video stream[0m
+[0;32mI (53454) avifile: movi pos:5678, size:27735274[0m
+[0;32mI (53454) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (53460) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (53465) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (53465) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (53465) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (53480) Adev_Codec: Open codec device OK[0m
+[1;31mE (53480) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (53480) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (53481) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (53482) ES7210: Bits 16[0m
+[0;32mI (53489) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (53492) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (53499) ES7210: Unmuted[0m
+[0;32mI (53499) Adev_Codec: Open codec device OK[0m
+[0;32mI (53676) video_cb: Frame 271 (320x200)[0m
+[0;32mI (54750) video_cb: Frame 301 (320x200)[0m
+[0;32mI (55836) video_cb: Frame 331 (320x200)[0m
+[0;32mI (57045) video_cb: Frame 361 (320x200)[0m
+[1;31mE (57257) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (57266) video_audio: AVI playback finished[0m
+[0;32mI (57549) avifile: Find a video stream[0m
+[0;32mI (57550) avifile: movi pos:5678, size:9891124[0m
+[0;32mI (57550) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (57555) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (57560) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (57560) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (57560) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (57575) Adev_Codec: Open codec device OK[0m
+[1;31mE (57575) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (57576) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (57576) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (57577) ES7210: Bits 16[0m
+[0;32mI (57584) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (57587) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (57594) ES7210: Unmuted[0m
+[0;32mI (57594) Adev_Codec: Open codec device OK[0m
+[0;32mI (58372) video_audio: AVI playback finished[0m
+[0;32mI (58659) avifile: Find a video stream[0m
+[0;32mI (58659) avifile: movi pos:5678, size:9180860[0m
+[0;32mI (58659) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (58664) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (58669) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (58669) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (58670) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (58685) Adev_Codec: Open codec device OK[0m
+[1;31mE (58685) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (58685) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (58685) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (58686) ES7210: Bits 16[0m
+[0;32mI (58693) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (58696) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (58703) ES7210: Unmuted[0m
+[0;32mI (58704) Adev_Codec: Open codec device OK[0m
+[0;32mI (59081) video_cb: Frame 391 (320x200)[0m
+[0;32mI (59348) video_audio: AVI playback finished[0m
+[0;32mI (59642) avifile: Find a video stream[0m
+[0;32mI (59643) avifile: movi pos:5678, size:5748248[0m
+[0;32mI (59643) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (59648) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (59653) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (59653) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (59653) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (59668) Adev_Codec: Open codec device OK[0m
+[1;31mE (59668) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (59669) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (59669) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (59670) ES7210: Bits 16[0m
+[0;32mI (59677) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (59680) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (59687) ES7210: Unmuted[0m
+[0;32mI (59687) Adev_Codec: Open codec device OK[0m
+[0;32mI (60300) video_audio: AVI playback finished[0m
+[0;32mI (60584) avifile: Find a video stream[0m
+[0;32mI (60584) avifile: Find a audio stream[0m
+[0;32mI (60584) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (60585) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (60590) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (60595) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (60595) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (60595) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (60610) Adev_Codec: Open codec device OK[0m
+[1;31mE (60610) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (60611) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (60611) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (60612) ES7210: Bits 16[0m
+[0;32mI (60619) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (60622) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (60629) ES7210: Unmuted[0m
+[0;32mI (60629) Adev_Codec: Open codec device OK[0m
+[0;32mI (61146) video_audio: AVI playback finished[0m
+[0;32mI (61433) avifile: Find a video stream[0m
+[0;32mI (61433) avifile: movi pos:5678, size:3242458[0m
+[0;32mI (61433) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (61439) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (61444) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (61444) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (61444) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (61459) Adev_Codec: Open codec device OK[0m
+[1;31mE (61459) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (61460) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (61460) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (61461) ES7210: Bits 16[0m
+[0;32mI (61468) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (61471) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (61478) ES7210: Unmuted[0m
+[0;32mI (61478) Adev_Codec: Open codec device OK[0m
+[0;32mI (61521) video_cb: Frame 421 (320x200)[0m
+[0;32mI (62126) video_audio: AVI playback finished[0m
+[0;32mI (62425) avifile: Find a video stream[0m
+[0;32mI (62425) avifile: Find a audio stream[0m
+[0;32mI (62425) avifile: movi pos:9906, size:28397078[0m
+[0;32mI (62425) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (62431) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (62435) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (62436) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (62436) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (62451) Adev_Codec: Open codec device OK[0m
+[1;31mE (62451) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (62451) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (62452) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (62453) ES7210: Bits 16[0m
+[0;32mI (62460) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (62463) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (62470) ES7210: Unmuted[0m
+[0;32mI (62470) Adev_Codec: Open codec device OK[0m
+[0;32mI (62903) video_audio: AVI playback finished[0m
+[0;32mI (63191) avifile: Find a video stream[0m
+[0;32mI (63192) avifile: movi pos:5678, size:9891124[0m
+[0;32mI (63192) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (63197) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (63202) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (63202) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (63202) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (63217) Adev_Codec: Open codec device OK[0m
+[1;31mE (63217) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (63218) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (63218) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (63219) ES7210: Bits 16[0m
+[0;32mI (63226) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (63229) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (63236) ES7210: Unmuted[0m
+[0;32mI (63236) Adev_Codec: Open codec device OK[0m
+[0;32mI (63563) video_cb: Frame 451 (320x200)[0m
+[1;31mE (63980) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (63986) video_audio: AVI playback finished[0m
+[1;31mE (64015) avi player: parse failed (-1)[0m
+[1;31mE (64015) avi player: AVI Perse failed[0m
+[0;32mI (64015) video_audio: AVI playback finished[0m
+[1;31mE (64031) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (64316) avifile: Find a video stream[0m
+[0;32mI (64317) avifile: movi pos:5678, size:9180860[0m
+[0;32mI (64317) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (64322) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (64327) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (64327) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (64327) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (64342) Adev_Codec: Open codec device OK[0m
+[1;31mE (64343) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (64343) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (64343) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (64344) ES7210: Bits 16[0m
+[0;32mI (64351) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (64354) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (64363) ES7210: Unmuted[0m
+[0;32mI (64364) Adev_Codec: Open codec device OK[0m
+[0;32mI (64813) video_audio: AVI playback finished[0m
+[0;32mI (65103) avifile: Find a video stream[0m
+[0;32mI (65103) avifile: movi pos:5678, size:9180860[0m
+[0;32mI (65103) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (65109) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (65113) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (65114) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (65114) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (65129) Adev_Codec: Open codec device OK[0m
+[1;31mE (65129) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (65129) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (65130) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (65131) ES7210: Bits 16[0m
+[0;32mI (65138) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (65141) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (65148) ES7210: Unmuted[0m
+[0;32mI (65148) Adev_Codec: Open codec device OK[0m
+[0;32mI (65974) video_cb: Frame 481 (320x200)[0m
+[1;31mE (67084) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (67092) video_audio: AVI playback finished[0m
+[1;31mE (67127) avi player: parse failed (-1)[0m
+[1;31mE (67127) avi player: AVI Perse failed[0m
+[0;32mI (67129) video_audio: AVI playback finished[0m
+[1;31mE (67139) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (67428) avifile: Find a video stream[0m
+[0;32mI (67428) avifile: movi pos:5678, size:5748248[0m
+[0;32mI (67429) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (67434) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (67439) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (67439) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (67439) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (67454) Adev_Codec: Open codec device OK[0m
+[1;31mE (67454) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (67455) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (67455) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (67456) ES7210: Bits 16[0m
+[0;32mI (67463) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (67466) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (67473) ES7210: Unmuted[0m
+[0;32mI (67473) Adev_Codec: Open codec device OK[0m
+[0;32mI (68077) video_cb: Frame 511 (320x200)[0m
+[0;32mI (68260) video_audio: AVI playback finished[0m
+[0;32mI (68543) avifile: Find a video stream[0m
+[0;32mI (68543) avifile: movi pos:5678, size:5748248[0m
+[0;32mI (68543) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (68548) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (68553) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (68553) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (68554) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (68569) Adev_Codec: Open codec device OK[0m
+[1;31mE (68569) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (68569) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (68569) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (68570) ES7210: Bits 16[0m
+[0;32mI (68577) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (68580) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (68588) ES7210: Unmuted[0m
+[0;32mI (68588) Adev_Codec: Open codec device OK[0m
+[0;32mI (69152) video_audio: AVI playback finished[0m
+[0;32mI (69436) avifile: Find a video stream[0m
+[0;32mI (69436) avifile: movi pos:5678, size:5748248[0m
+[0;32mI (69436) video_audio: Setting I2S clock: sample rate=44100, bit width=16, channels=2[0m
+[0;32mI (69442) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (69446) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (69447) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (69447) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (69462) Adev_Codec: Open codec device OK[0m
+[1;31mE (69462) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (69462) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (69463) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:44100 mask:3[0m
+[0;32mI (69464) ES7210: Bits 16[0m
+[0;32mI (69471) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (69474) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (69481) ES7210: Unmuted[0m
+[0;32mI (69481) Adev_Codec: Open codec device OK[0m
+[1;31mE (70035) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (70046) video_audio: AVI playback finished[0m
+[1;31mE (70081) avi player: parse failed (-1)[0m
+[1;31mE (70081) avi player: AVI Perse failed[0m
+[0;32mI (70081) video_audio: AVI playback finished[0m
+[1;31mE (70091) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (70380) avifile: Find a video stream[0m
+[0;32mI (70381) avifile: Find a audio stream[0m
+[0;32mI (70381) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (70381) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (70386) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (70391) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (70391) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (70391) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (70406) Adev_Codec: Open codec device OK[0m
+[1;31mE (70407) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (70407) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (70407) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (70408) ES7210: Bits 16[0m
+[0;32mI (70415) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (70418) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (70425) ES7210: Unmuted[0m
+[0;32mI (70425) Adev_Codec: Open codec device OK[0m
+[0;32mI (70578) video_cb: Frame 541 (320x200)[0m
+[0;32mI (71056) video_audio: AVI playback finished[0m
+[0;32mI (71348) avifile: Find a video stream[0m
+[0;32mI (71348) avifile: Find a audio stream[0m
+[0;32mI (71348) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (71349) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (71354) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (71359) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (71359) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (71359) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (71374) Adev_Codec: Open codec device OK[0m
+[1;31mE (71374) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (71375) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (71375) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (71376) ES7210: Bits 16[0m
+[0;32mI (71383) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (71386) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (71393) ES7210: Unmuted[0m
+[0;32mI (71393) Adev_Codec: Open codec device OK[0m
+[0;32mI (71987) video_audio: AVI playback finished[0m
+[0;32mI (72278) avifile: Find a video stream[0m
+[0;32mI (72279) avifile: Find a audio stream[0m
+[0;32mI (72279) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (72279) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (72284) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (72289) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (72289) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (72289) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (72304) Adev_Codec: Open codec device OK[0m
+[1;31mE (72305) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (72305) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (72305) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (72306) ES7210: Bits 16[0m
+[0;32mI (72313) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (72316) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (72323) ES7210: Unmuted[0m
+[0;32mI (72324) Adev_Codec: Open codec device OK[0m
+[0;32mI (72435) video_cb: Frame 571 (320x200)[0m
+[0;32mI (72956) video_audio: AVI playback finished[0m
+[0;32mI (73237) avifile: Find a video stream[0m
+[0;32mI (73237) avifile: Find a audio stream[0m
+[0;32mI (73237) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (73237) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (73243) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (73247) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (73248) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (73248) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (73263) Adev_Codec: Open codec device OK[0m
+[1;31mE (73263) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (73263) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (73263) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (73265) ES7210: Bits 16[0m
+[0;32mI (73272) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (73274) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (73282) ES7210: Unmuted[0m
+[0;32mI (73282) Adev_Codec: Open codec device OK[0m
+[1;31mE (73872) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (73878) video_audio: AVI playback finished[0m
+[1;31mE (73907) avi player: parse failed (-1)[0m
+[1;31mE (73907) avi player: AVI Perse failed[0m
+[0;32mI (73908) video_audio: AVI playback finished[0m
+[1;31mE (73923) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (74213) avifile: Find a video stream[0m
+[0;32mI (74214) avifile: movi pos:5678, size:3242458[0m
+[0;32mI (74214) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (74219) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (74224) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (74224) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (74224) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (74239) Adev_Codec: Open codec device OK[0m
+[1;31mE (74239) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (74240) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (74240) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (74241) ES7210: Bits 16[0m
+[0;32mI (74248) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (74251) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (74258) ES7210: Unmuted[0m
+[0;32mI (74258) Adev_Codec: Open codec device OK[0m
+[0;32mI (74352) video_cb: Frame 601 (320x200)[0m
+[0;32mI (74762) video_audio: AVI playback finished[0m
+[0;32mI (75048) avifile: Find a video stream[0m
+[0;32mI (75048) avifile: movi pos:5678, size:3242458[0m
+[0;32mI (75048) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (75054) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (75058) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (75059) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (75059) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (75074) Adev_Codec: Open codec device OK[0m
+[1;31mE (75074) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (75074) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (75075) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (75076) ES7210: Bits 16[0m
+[0;32mI (75083) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (75086) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (75093) ES7210: Unmuted[0m
+[0;32mI (75093) Adev_Codec: Open codec device OK[0m
+[0;32mI (75642) video_audio: AVI playback finished[0m
+[0;32mI (75937) avifile: Find a video stream[0m
+[0;32mI (75937) avifile: movi pos:5678, size:3242458[0m
+[0;32mI (75937) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (75943) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (75948) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (75948) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (75948) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (75963) Adev_Codec: Open codec device OK[0m
+[1;31mE (75963) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (75963) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (75964) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (75965) ES7210: Bits 16[0m
+[0;32mI (75972) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (75975) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (75982) ES7210: Unmuted[0m
+[0;32mI (75982) Adev_Codec: Open codec device OK[0m
+[1;31mE (76458) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (76479) video_audio: AVI playback finished[0m
+[0;32mI (76773) avifile: Find a video stream[0m
+[0;32mI (76774) avifile: movi pos:5678, size:27735274[0m
+[0;32mI (76774) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (76779) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (76784) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (76784) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (76784) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (76799) Adev_Codec: Open codec device OK[0m
+[1;31mE (76800) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (76800) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (76800) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (76801) ES7210: Bits 16[0m
+[0;32mI (76810) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (76813) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (76821) ES7210: Unmuted[0m
+[0;32mI (76821) Adev_Codec: Open codec device OK[0m
+[0;32mI (76848) video_cb: Frame 631 (320x200)[0m
+[0;32mI (77924) video_audio: AVI playback finished[0m
+[0;32mI (78218) avifile: Find a video stream[0m
+[0;32mI (78219) avifile: movi pos:5678, size:27735274[0m
+[0;32mI (78219) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (78224) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (78229) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (78229) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (78229) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (78244) Adev_Codec: Open codec device OK[0m
+[1;31mE (78245) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (78245) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (78245) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (78246) ES7210: Bits 16[0m
+[0;32mI (78253) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (78256) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (78263) ES7210: Unmuted[0m
+[0;32mI (78264) Adev_Codec: Open codec device OK[0m
+[0;32mI (78291) video_cb: Frame 661 (320x200)[0m
+[0;32mI (79373) video_cb: Frame 691 (320x200)[0m
+[0;32mI (80449) video_cb: Frame 721 (320x200)[0m
+[1;31mE (81189) avi player: avi_player_play_from_file(348): AVI player not ready[0m
+[0;32mI (81204) video_audio: AVI playback finished[0m
+[0;32mI (81488) avifile: Find a video stream[0m
+[0;32mI (81489) avifile: movi pos:5678, size:9891124[0m
+[0;32mI (81489) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (81494) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (81499) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (81499) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (81499) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (81514) Adev_Codec: Open codec device OK[0m
+[1;31mE (81514) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (81515) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (81515) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (81516) ES7210: Bits 16[0m
+[0;32mI (81523) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (81526) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (81533) ES7210: Unmuted[0m
+[0;32mI (81533) Adev_Codec: Open codec device OK[0m
+[0;32mI (81983) video_cb: Frame 751 (320x200)[0m
+[0;32mI (83063) video_audio: AVI playback finished[0m
+[0;32mI (83348) avifile: Find a video stream[0m
+[0;32mI (83348) avifile: movi pos:5678, size:9180860[0m
+[0;32mI (83348) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (83353) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (83358) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (83358) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (83359) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (83373) Adev_Codec: Open codec device OK[0m
+[1;31mE (83374) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (83374) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (83374) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (83375) ES7210: Bits 16[0m
+[0;32mI (83382) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (83385) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (83392) ES7210: Unmuted[0m
+[0;32mI (83393) Adev_Codec: Open codec device OK[0m
+[0;32mI (83578) video_cb: Frame 781 (320x200)[0m
+[0;32mI (85433) video_cb: Frame 811 (320x200)[0m
+[0;32mI (87224) video_cb: Frame 841 (320x200)[0m
+[0;32mI (89171) video_cb: Frame 871 (320x200)[0m
+[0;32mI (90930) video_cb: Frame 901 (320x200)[0m
+[0;32mI (92403) video_cb: Frame 931 (320x200)[0m
+[0;32mI (94062) video_cb: Frame 961 (320x200)[0m
+[0;32mI (95778) video_cb: Frame 991 (320x200)[0m
+[0;32mI (97451) video_cb: Frame 1021 (320x200)[0m
+[0;32mI (98963) video_cb: Frame 1051 (320x200)[0m
+[0;32mI (100327) video_cb: Frame 1081 (320x200)[0m
+[0;32mI (101718) video_cb: Frame 1111 (320x200)[0m
+[0;32mI (103100) video_cb: Frame 1141 (320x200)[0m
+[0;32mI (104418) video_cb: Frame 1171 (320x200)[0m
+[0;32mI (104927) avi player: play end[0m
+[0;32mI (104928) video_audio: AVI playback finished[0m
+[1;31mE (104929) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[1;31mE (104964) avi player: parse failed (-1)[0m
+[1;31mE (104964) avi player: AVI Perse failed[0m
+[0;32mI (104964) video_audio: AVI playback finished[0m
+[1;31mE (104980) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (105265) avifile: Find a video stream[0m
+[0;32mI (105265) avifile: movi pos:5678, size:5748248[0m
+[0;32mI (105265) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (105271) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (105275) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (105276) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (105276) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (105293) Adev_Codec: Open codec device OK[0m
+[1;31mE (105293) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (105293) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (105294) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (105295) ES7210: Bits 16[0m
+[0;32mI (105302) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (105305) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (105312) ES7210: Unmuted[0m
+[0;32mI (105312) Adev_Codec: Open codec device OK[0m
+[0;32mI (106222) video_cb: Frame 1201 (320x200)[0m
+[0;32mI (107394) video_cb: Frame 1231 (320x200)[0m
+[0;32mI (108612) video_cb: Frame 1261 (320x200)[0m
+[0;32mI (110017) video_cb: Frame 1291 (320x200)[0m
+[0;32mI (111594) video_cb: Frame 1321 (320x200)[0m
+[0;32mI (113018) video_cb: Frame 1351 (320x200)[0m
+[0;32mI (114296) video_cb: Frame 1381 (320x200)[0m
+[0;32mI (115645) video_cb: Frame 1411 (320x200)[0m
+[0;32mI (117158) video_cb: Frame 1441 (320x200)[0m
+[0;32mI (118715) video_cb: Frame 1471 (320x200)[0m
+[0;32mI (119241) avi player: play end[0m
+[0;32mI (119241) video_audio: AVI playback finished[0m
+[1;31mE (119255) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[1;31mE (119290) avi player: parse failed (-1)[0m
+[1;31mE (119290) avi player: AVI Perse failed[0m
+[0;32mI (119291) video_audio: AVI playback finished[0m
+[1;31mE (119306) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (119592) avifile: Find a video stream[0m
+[0;32mI (119592) avifile: Find a audio stream[0m
+[0;32mI (119592) avifile: movi pos:9982, size:9064434[0m
+[0;32mI (119593) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (119598) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (119603) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (119603) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (119603) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (119618) Adev_Codec: Open codec device OK[0m
+[1;31mE (119618) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (119619) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (119619) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (119620) ES7210: Bits 16[0m
+[0;32mI (119627) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (119630) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (119637) ES7210: Unmuted[0m
+[0;32mI (119637) Adev_Codec: Open codec device OK[0m
+[0;32mI (120420) video_cb: Frame 1501 (320x200)[0m
+[0;32mI (121659) video_cb: Frame 1531 (320x200)[0m
+[0;32mI (122949) video_cb: Frame 1561 (320x200)[0m
+[0;32mI (124267) video_cb: Frame 1591 (320x200)[0m
+[0;32mI (125607) video_cb: Frame 1621 (320x200)[0m
+[0;32mI (126983) video_cb: Frame 1651 (320x200)[0m
+[0;32mI (128370) video_cb: Frame 1681 (320x200)[0m
+[0;32mI (129760) video_cb: Frame 1711 (320x200)[0m
+[0;32mI (131127) video_cb: Frame 1741 (320x200)[0m
+[0;32mI (132508) video_cb: Frame 1771 (320x200)[0m
+[0;32mI (133907) video_cb: Frame 1801 (320x200)[0m
+[0;32mI (135310) video_cb: Frame 1831 (320x200)[0m
+[0;32mI (136693) video_cb: Frame 1861 (320x200)[0m
+[0;32mI (138081) video_cb: Frame 1891 (320x200)[0m
+[0;32mI (139450) video_cb: Frame 1921 (320x200)[0m
+[0;32mI (140822) video_cb: Frame 1951 (320x200)[0m
+[0;32mI (141552) avi player: play end[0m
+[0;32mI (141552) video_audio: AVI playback finished[0m
+[1;31mE (141567) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[1;31mE (141602) avi player: parse failed (-1)[0m
+[1;31mE (141602) avi player: AVI Perse failed[0m
+[0;32mI (141602) video_audio: AVI playback finished[0m
+[1;31mE (141618) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (141904) avifile: Find a video stream[0m
+[0;32mI (141905) avifile: movi pos:5678, size:3242458[0m
+[0;32mI (141905) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (141910) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (141915) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (141915) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (141915) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (141930) Adev_Codec: Open codec device OK[0m
+[1;31mE (141930) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (141931) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (141931) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (141932) ES7210: Bits 16[0m
+[0;32mI (141939) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (141942) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (141949) ES7210: Unmuted[0m
+[0;32mI (141949) Adev_Codec: Open codec device OK[0m
+[0;32mI (142743) video_cb: Frame 1981 (320x200)[0m
+[0;32mI (144252) video_cb: Frame 2011 (320x200)[0m
+[0;32mI (145763) video_cb: Frame 2041 (320x200)[0m
+[0;32mI (147327) video_cb: Frame 2071 (320x200)[0m
+[0;32mI (148888) video_cb: Frame 2101 (320x200)[0m
+[0;32mI (149672) avi player: play end[0m
+[0;32mI (149673) video_audio: AVI playback finished[0m
+[1;31mE (149688) avi player: avi_player_play_stop(363): AVI player not playing[0m
+[0;32mI (149990) avifile: Find a video stream[0m
+[0;32mI (149990) avifile: movi pos:5678, size:27735274[0m
+[0;32mI (149990) video_audio: Setting I2S clock: sample rate=16000, bit width=16, channels=2[0m
+[0;32mI (149996) I2S_IF: Pending out channel for in channel running[0m
+[1;31mE (150000) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (150001) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (150001) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (150016) Adev_Codec: Open codec device OK[0m
+[1;31mE (150016) i2s_common: i2s_channel_disable(1191): the channel has not been enabled yet[0m
+[0;32mI (150016) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (150016) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (150018) ES7210: Bits 16[0m
+[0;32mI (150025) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (150027) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (150035) ES7210: Unmuted[0m
+[0;32mI (150035) Adev_Codec: Open codec device OK[0m
+[0;32mI (150564) video_cb: Frame 2131 (320x200)[0m
+[0;32mI (151635) video_cb: Frame 2161 (320x200)[0m
+[0;32mI (152769) video_cb: Frame 2191 (320x200)[0m
+[0;32mI (153990) video_cb: Frame 2221 (320x200)[0m
+[0;32mI (155172) video_cb: Frame 2251 (320x200)[0m
+[0;32mI (156350) video_cb: Frame 2281 (320x200)[0m
+[0;32mI (157385) video_cb: Frame 2311 (320x200)[0m
+[0;32mI (158448) video_cb: Frame 2341 (320x200)[0m
+[0;32mI (159518) video_cb: Frame 2371 (320x200)[0m
+[0;32mI (160592) video_cb: Frame 2401 (320x200)[0m
+[0;32mI (161701) video_cb: Frame 2431 (320x200)[0m
+[0;32mI (162783) video_cb: Frame 2461 (320x200)[0m
+[0;32mI (163765) video_cb: Frame 2491 (320x200)[0m
+[0;32mI (164767) video_cb: Frame 2521 (320x200)[0m
+[0;32mI (165786) video_cb: Frame 2551 (320x200)[0m
+[0;32mI (166895) video_cb: Frame 2581 (320x200)[0m
+[0;32mI (168098) video_cb: Frame 2611 (320x200)[0m
+[0;32mI (169323) video_cb: Frame 2641 (320x200)[0m
+[0;32mI (170501) video_cb: Frame 2671 (320x200)[0m
+[0;32mI (171703) video_cb: Frame 2701 (320x200)[0m
+[0;32mI (172879) video_cb: Frame 2731 (320x200)[0m
+[0;32mI (174008) video_cb: Frame 2761 (320x200)[0m
+[0;32mI (175127) video_cb: Frame 2791 (320x200)[0m
+[0;32mI (176278) video_cb: Frame 2821 (320x200)[0m
+[0;32mI (177438) video_cb: Frame 2851 (320x200)[0m
+[0;32mI (178582) video_cb: Frame 2881 (320x200)[0m
+[0;32mI (179766) video_cb: Frame 2911 (320x200)[0m
+[0;32mI (181006) video_cb: Frame 2941 (320x200)[0m
+[0;32mI (182242) video_cb: Frame 2971 (320x200)[0m
+[0;32mI (183499) video_cb: Frame 3001 (320x200)[0m
+[0;32mI (184770) video_cb: Frame 3031 (320x200)[0m
+[0;32mI (186016) video_cb: Frame 3061 (320x200)[0m
+[0;32mI (187274) video_cb: Frame 3091 (320x200)[0m
+[0;32mI (188514) video_cb: Frame 3121 (320x200)[0m
+[0;32mI (189756) video_cb: Frame 3151 (320x200)[0m
+[0;32mI (191005) video_cb: Frame 3181 (320x200)[0m
+[0;32mI (192263) video_cb: Frame 3211 (320x200)[0m
+[0;32mI (193517) video_cb: Frame 3241 (320x200)[0m
+[0;32mI (194782) video_cb: Frame 3271 (320x200)[0m
+[0;32mI (196052) video_cb: Frame 3301 (320x200)[0m
+[0;32mI (197327) video_cb: Frame 3331 (320x200)[0m
+[0;32mI (198600) video_cb: Frame 3361 (320x200)[0m
+[0;32mI (199840) video_cb: Frame 3391 (320x200)[0m
+[0;32mI (201074) video_cb: Frame 3421 (320x200)[0m

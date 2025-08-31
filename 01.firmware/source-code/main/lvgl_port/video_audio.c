@@ -54,8 +54,56 @@ static lv_obj_t *s_video_page = NULL;
 static volatile bool s_video_stop_req = false;
 static TaskHandle_t s_video_start_task = NULL;
 static volatile bool s_video_task_exited = false;
+static volatile int s_cur_idx = 0;
+static bool s_sd_mounted = false;
+
+static esp_err_t sd_mount_once(void)
+{
+    if (s_sd_mounted)
+        return ESP_OK;
+    esp_err_t err = bsp_sdcard_mount();
+    if (err == ESP_OK)
+        s_sd_mounted = true;
+    return err;
+}
+
+static void sd_unmount_if_mounted(void)
+{
+    if (!s_sd_mounted)
+        return;
+    // 你的 BSP 如有这个 API，直接用：
+    bsp_sdcard_unmount();
+
+    // 如果没有 bsp_sdcard_unmount()，用你工程里保存的 card 指针做等价卸载：
+    // extern sdmmc_card_t *g_card;
+    // esp_vfs_fat_sdcard_unmount("/sdcard", g_card);
+    // sdmmc_host_deinit();  // 若用 SDMMC
+    // sdspi_host_deinit();  // 若用 SDSPI
+
+    s_sd_mounted = false;
+}
+
+typedef enum
+{
+    CMD_NONE = 0,
+    CMD_NEXT,
+    CMD_PREV,
+} video_cmd_t;
+
+static volatile video_cmd_t s_video_cmd = CMD_NONE;
 
 static void video_back_btn_cb(lv_event_t *e);
+
+static void video_prev_btn_cb(lv_event_t *e)
+{
+    if (lv_event_get_code(e) == LV_EVENT_CLICKED)
+        s_video_cmd = CMD_PREV;
+}
+static void video_next_btn_cb(lv_event_t *e)
+{
+    if (lv_event_get_code(e) == LV_EVENT_CLICKED)
+        s_video_cmd = CMD_NEXT;
+}
 
 // 在新页面上创建 UI（顶部返回+内容容器+状态标签），返回状态标签
 static lv_obj_t *create_video_page_and_get_status_label(void)
@@ -72,11 +120,29 @@ static lv_obj_t *create_video_page_and_get_status_label(void)
 
     lv_obj_t *btn_back = lv_btn_create(s_video_page);
     lv_obj_set_size(btn_back, 80, 40);
-    lv_obj_align(btn_back, LV_ALIGN_BOTTOM_LEFT, 100, 0);
+    lv_obj_align(btn_back, LV_ALIGN_BOTTOM_LEFT, 120, -10);
     lv_obj_add_event_cb(btn_back, video_back_btn_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_t *lbl = lv_label_create(btn_back);
     lv_label_set_text(lbl, LV_SYMBOL_LEFT " Back");
     lv_obj_center(lbl);
+
+    // 上一集按钮
+    lv_obj_t *btn_prev = lv_btn_create(s_video_page);
+    lv_obj_set_size(btn_prev, 80, 40);
+    lv_obj_align(btn_prev, LV_ALIGN_TOP_MID, -70, 10); // 底部居中偏左
+    lv_obj_t *lbl_prev = lv_label_create(btn_prev);
+    lv_label_set_text(lbl_prev, LV_SYMBOL_LEFT " Prev");
+    lv_obj_center(lbl_prev);
+    lv_obj_add_event_cb(btn_prev, video_prev_btn_cb, LV_EVENT_CLICKED, NULL);
+
+    // 下一集按钮
+    lv_obj_t *btn_next = lv_btn_create(s_video_page);
+    lv_obj_set_size(btn_next, 80, 40);
+    lv_obj_align(btn_next, LV_ALIGN_TOP_MID, 70, 10); // 底部居中偏右
+    lv_obj_t *lbl_next = lv_label_create(btn_next);
+    lv_label_set_text(lbl_next, "Next " LV_SYMBOL_RIGHT);
+    lv_obj_center(lbl_next);
+    lv_obj_add_event_cb(btn_next, video_next_btn_cb, LV_EVENT_CLICKED, NULL);
 
     // 内容容器
     lv_obj_t *content = lv_obj_create(s_video_page);
@@ -120,6 +186,7 @@ static bool has_ext_ci(const char *name, const char *ext)
 
 static esp_err_t get_avi_file_list(const char *dir_path)
 {
+
     DIR *dir = opendir(dir_path);
     if (!dir)
     {
@@ -200,6 +267,8 @@ static esp_err_t get_avi_file_list(const char *dir_path)
     // 若中间因为 stat 过滤掉了一些，修正 avi_file_count
     avi_file_list = list;
     avi_file_count = idx;
+    s_cur_idx = 0; // ← 开始从第 0 个播
+    s_video_cmd = CMD_NONE;
 
     ESP_LOGI(TAG, "Found %d AVI files in %s", avi_file_count, dir_path);
     for (int i = 0; i < avi_file_count; i++)
@@ -209,96 +278,6 @@ static esp_err_t get_avi_file_list(const char *dir_path)
 
     return (avi_file_count > 0) ? ESP_OK : ESP_FAIL;
 }
-
-// static esp_err_t get_avi_file_list(const char *dir_path)
-// {
-//     DIR *dir = opendir(dir_path);
-//     if (!dir)
-//     {
-//         ESP_LOGE(TAG, "Failed to open directory: %s", dir_path);
-//         return ESP_FAIL;
-//     }
-
-//     struct dirent *entry;
-//     int count = 0;
-
-//     while ((entry = readdir(dir)) != NULL)
-//     {
-//         if (entry->d_type == DT_REG)
-//         {
-//             char *ext = strrchr(entry->d_name, '.');
-//             if (ext && (strcasecmp(ext, ".avi") == 0))
-//             {
-//                 count++;
-//             }
-//         }
-//     }
-
-//     if (count == 0)
-//     {
-//         closedir(dir);
-//         ESP_LOGW(TAG, "No AVI files found in directory %s", dir_path);
-//         return ESP_FAIL;
-//     }
-
-//     avi_file_list = (char **)malloc(sizeof(char *) * count);
-//     if (!avi_file_list)
-//     {
-//         closedir(dir);
-//         ESP_LOGE(TAG, "Failed to allocate memory for file list");
-//         return ESP_ERR_NO_MEM;
-//     }
-//     avi_file_count = count;
-//     count = 0;
-
-//     rewinddir(dir);
-//     while ((entry = readdir(dir)) != NULL)
-//     {
-//         if (entry->d_type == DT_REG)
-//         {
-//             char *ext = strrchr(entry->d_name, '.');
-//             if (ext && (strcasecmp(ext, ".avi") == 0))
-//             {
-//                 size_t dir_len = strlen(dir_path);
-//                 size_t file_len = strlen(entry->d_name);
-//                 char *full_path = (char *)malloc(dir_len + file_len + 2);
-//                 if (!full_path)
-//                 {
-//                     ESP_LOGE(TAG, "Failed to allocate memory for file path");
-//                     for (int i = 0; i < count; i++)
-//                     {
-//                         free(avi_file_list[i]);
-//                     }
-//                     free(avi_file_list);
-//                     avi_file_list = NULL;
-//                     avi_file_count = 0;
-//                     closedir(dir);
-//                     return ESP_ERR_NO_MEM;
-//                 }
-
-//                 if (dir_len > 0 && dir_path[dir_len - 1] == '/')
-//                 {
-//                     sprintf(full_path, "%s%s", dir_path, entry->d_name);
-//                 }
-//                 else
-//                 {
-//                     sprintf(full_path, "%s/%s", dir_path, entry->d_name);
-//                 }
-
-//                 avi_file_list[count++] = full_path;
-//             }
-//         }
-//     }
-
-//     closedir(dir);
-//     ESP_LOGI(TAG, "Found %d AVI files in directory %s", avi_file_count, dir_path);
-//     for (int i = 0; i < avi_file_count; i++)
-//     {
-//         ESP_LOGI(TAG, "AVI file %d: %s", i + 1, avi_file_list[i]);
-//     }
-
-//     return ESP_OK;
-// }
 
 static void init_canvas(void)
 {
@@ -545,7 +524,6 @@ static void avi_play_task(void *arg)
 #endif
     };
 
-    // 先准备画布
     bsp_display_lock(0);
     init_canvas();
     bsp_display_unlock();
@@ -556,43 +534,54 @@ static void avi_play_task(void *arg)
     { // ← 关键改动
         if (avi_file_count <= 0)
         {
-            vTaskDelay(pdMS_TO_TICKS(1000));
+            vTaskDelay(pdMS_TO_TICKS(200));
             continue;
         }
 
-        for (int i = 0; i < avi_file_count && loop_playback && !s_video_stop_req; i++)
+        // 索引收敛到合法范围（支持环绕）
+        if (s_cur_idx < 0)
+            s_cur_idx = (avi_file_count - 1);
+        if (s_cur_idx >= avi_file_count)
+            s_cur_idx = 0;
+
+        const char *path = avi_file_list[s_cur_idx];
+
+        avi_player_play_stop(handle);
+        vTaskDelay(pdMS_TO_TICKS(30));
+
+        if (s_video_stop_req)
+            break;
+
+        is_playing = true;
+        esp_err_t err = avi_player_play_from_file(handle, path);
+        if (err != ESP_OK)
         {
-            const char *path = avi_file_list[i];
-
-            avi_player_play_stop(handle);
-            vTaskDelay(pdMS_TO_TICKS(50));
-
-            if (s_video_stop_req)
-                break;
-
-            is_playing = true;
-            esp_err_t err = avi_player_play_from_file(handle, path);
-            if (err != ESP_OK)
-            {
-                is_playing = false;
-                vTaskDelay(pdMS_TO_TICKS(200));
-                continue;
-            }
-
-            // 播放中：也要检查 stop
-            while (loop_playback && is_playing && !s_video_stop_req)
-            {
-                vTaskDelay(pdMS_TO_TICKS(20));
-                // ... 可选日志 ...
-            }
-
-            avi_player_play_stop(handle);
-            vTaskDelay(pdMS_TO_TICKS(100));
+            is_playing = false;
+            // 播不动就跳过到下一集
+            s_cur_idx = (s_cur_idx + 1) % avi_file_count;
+            continue;
         }
 
-        if (loop_playback && !s_video_stop_req)
+        // 播放中轮询命令/停止
+        while (!s_video_stop_req && is_playing)
         {
-            vTaskDelay(pdMS_TO_TICKS(300));
+            if (s_video_cmd == CMD_NEXT || s_video_cmd == CMD_PREV)
+            {
+                // 中断当前播放
+                avi_player_play_stop(handle);
+                is_playing = false;
+                int delta = (s_video_cmd == CMD_NEXT) ? +1 : -1;
+                s_cur_idx = (s_cur_idx + delta + avi_file_count) % avi_file_count;
+                s_video_cmd = CMD_NONE;
+                break; // 跳出到外层，开始播新的索引
+            }
+            vTaskDelay(pdMS_TO_TICKS(20));
+        }
+
+        // 自然播完（avi_end_cb 把 is_playing=false）
+        if (!s_video_stop_req && s_video_cmd == CMD_NONE && !is_playing)
+        {
+            s_cur_idx = (s_cur_idx + 1) % avi_file_count; // 连播下一集
         }
     }
 
@@ -626,7 +615,9 @@ static void avi_play_task(void *arg)
         avi_file_count = 0;
     }
 
-    s_video_task_exited = true; // ← 告知 UI：可以切屏/删页了
+    sd_unmount_if_mounted();
+
+    s_video_task_exited = true;
     vTaskDelete(NULL);
 }
 
@@ -732,6 +723,7 @@ void video_audio_start(lv_obj_t *parent, char *path)
     xTaskCreatePinnedToCore(avi_play_task, "avi_play_task", 12288, NULL, 7, NULL, 0);
 }
 
+
 static void video_start_worker(void *arg)
 {
     lv_obj_t *status_label = (lv_obj_t *)arg;
@@ -740,63 +732,61 @@ static void video_start_worker(void *arg)
     ESP_ERROR_CHECK(bsp_extra_codec_init());
     bsp_extra_codec_volume_set(80, NULL);
 
-    // --- 挂载并提示 ---
-    int retry = 0;
-    esp_err_t mount_err = ESP_FAIL;
-    while (!s_video_stop_req)
-    {
-        bsp_display_lock(0);
-        lv_label_set_text_fmt(status_label, "Mounting SD card...\nAttempt: %d", ++retry);
-        bsp_display_unlock();
+    if (s_video_stop_req) goto EXIT;
 
-        mount_err = bsp_sdcard_mount();
-        if (mount_err == ESP_OK)
-            break;
+    // —— 单次挂载（不重试）——
+    bsp_display_lock(0);
+    if (status_label) lv_label_set_text(status_label, "Mounting SD card...");
+    bsp_display_unlock();
 
-        ESP_LOGW(TAG, "SD mount attempt %d failed: %s", retry, esp_err_to_name(mount_err));
-        vTaskDelay(pdMS_TO_TICKS(2000));
-    }
-    if (s_video_stop_req)
-        goto EXIT;
+    esp_err_t mount_err = sd_mount_once();   // ← 只挂载一次
+    if (s_video_stop_req) goto EXIT;
 
     if (mount_err != ESP_OK)
     {
         bsp_display_lock(0);
-        lv_label_set_text(status_label, "SD card error\nCheck and restart");
-        lv_obj_set_style_text_color(status_label, lv_color_hex(0xFF0000), 0);
+        if (status_label) {
+            lv_label_set_text(status_label, "SD card mount failed");
+            lv_obj_set_style_text_color(status_label, lv_color_hex(0xFF0000), 0);
+        }
         bsp_display_unlock();
-        goto EXIT; // 不死循环，允许返回键退出
+        goto EXIT;   // 允许返回键退出
     }
 
-    // --- 读取 AVI 列表 ---
-    const char *dir = "/sdcard/am_nr"; // TODO: 如挂载点非 /sdcard，请改为实际 mount point
+    // —— 读取 AVI 列表 —— 
+    const char *dir = "/sdcard/am_nr";   // 按你的目录
     esp_err_t list_err = get_avi_file_list(dir);
+    if (s_video_stop_req) goto EXIT;
+
     if (list_err != ESP_OK || avi_file_count == 0)
     {
         bsp_display_lock(0);
-        lv_label_set_text_fmt(status_label, "No AVI files found\nin %s", dir);
-        lv_obj_set_style_text_color(status_label, lv_color_hex(0xFF0000), 0);
+        if (status_label) {
+            lv_label_set_text_fmt(status_label, "No AVI files found\nin %s", dir);
+            lv_obj_set_style_text_color(status_label, lv_color_hex(0xFF0000), 0);
+        }
         bsp_display_unlock();
         goto EXIT;
     }
 
     // 删除提示，开始播放
     bsp_display_lock(0);
-    if (status_label)
+    if (status_label && lv_obj_is_valid(status_label)) {
         lv_obj_del(status_label);
+        status_label = NULL;
+    }
     bsp_display_unlock();
 
     ESP_LOGI(TAG, "SD mounted, found %d AVI files", avi_file_count);
 
     // 把页面指针传给 avi_play_task（用于在该页面显示视频）
-    // avi_play_task 内部循环里要定期检查 s_video_stop_req，收到后做善后并退出
-    xTaskCreatePinnedToCore(avi_play_task, "avi_play_task", 12288, (void *)s_video_page, 7, NULL, 0);
+    xTaskCreatePinnedToCore(avi_play_task, "avi_play_task", 12288,
+                            (void *)s_video_page, 7, NULL, 0);
 
 EXIT:
     s_video_start_task = NULL;
     vTaskDelete(NULL);
 }
-
 // 你要的入口：在这里“创建新页面并播放”
 void video_audio_start_on_new_page(void)
 {

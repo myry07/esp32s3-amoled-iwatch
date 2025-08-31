@@ -67,7 +67,7 @@ static void load_page_cb(lv_event_t *e)
                 ESP_LOGI("gesture", "上滑");
                 {
                     new_scr = page_main_create();
-                    lv_scr_load_anim(new_scr, LV_SCR_LOAD_ANIM_MOVE_TOP, 50, 0, true);
+                    lv_scr_load_anim(new_scr, LV_SCR_LOAD_ANIM_MOVE_TOP, 200, 0, true);
                 }
             }
         }
@@ -123,8 +123,8 @@ lv_obj_t *page_lock_create(void)
     bsp_display_lock(portMAX_DELAY);
     s_time_label = lv_label_create(s_lock_page);
     lv_obj_set_style_text_color(s_time_label, lv_color_white(), 0);
-    lv_obj_set_style_text_font(s_time_label, &lv_font_montserrat_30, 0);
-    lv_obj_align(s_time_label, LV_ALIGN_TOP_LEFT, 60, 16);
+    lv_obj_set_style_text_font(s_time_label, &lv_font_montserrat_40, 0);
+    lv_obj_align(s_time_label, LV_ALIGN_TOP_MID, 0, 40);
     lv_label_set_text(s_time_label, "09:00");
 
     lv_obj_t *bat_label = lv_label_create(s_lock_page);
